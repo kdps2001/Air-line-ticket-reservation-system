@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyWave - Sign Up</title>
+    <title>SkyWave - Register</title>
     <link rel="stylesheet" href="styles/web_style.css">
     <link rel="stylesheet" href="styles/signin_up_style.css">
 </head>
@@ -22,7 +22,7 @@
         </div>
         <div class="nav-button">
             <button class="btn signin" id="loginBtn" onclick="window.location.href='signin.html'">Sign In</button>
-            <button class="btn signup" id="registerBtn" onclick="window.location.href='signup.html'">Sign Up</button>
+            <button class="btn signup" id="registerBtn" onclick="window.location.href='signup.html'">Register</button>
         </div>
         
     </nav>
@@ -31,7 +31,7 @@
         <div class="form-box">
             <h2>Create Account</h2>
 
-            <form action="signup.php" method="POST" onsubmit="return validateForm()">
+            <form action="register.php" method="POST" onsubmit="return validateForm()">
                 <div class="input-group">
                     <label for="firstname">First Name</label>
                     <input type="text" id="firstname" name="firstname" required>
@@ -65,10 +65,10 @@
                 <p id="error-msg" style="color: red; text-align: center;"></p>
 
                 <div class="input-group">
-                    <button type="submit" name = "submit" class="btn">Sign Up</button>
+                    <button type="submit" name = "submit" class="btn">Register</button>
                 </div>
                 
-                <p>Already have an account? <a href="signin.html">Sign In</a></p>
+                <p>Already have an account? <a href="signin.html">Log In</a></p>
             </form>
         </div>
     </div>
