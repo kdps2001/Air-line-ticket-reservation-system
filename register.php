@@ -16,25 +16,21 @@
 
         if($invalidUserName !== false)
         {
-            header("location: signup.html?Error=invalidUserName");
+            header("location: signup.php?Error=invalidUserName");
             exit();
         }
 
         if($loginExists !== false)
         {
-            header("location: signup.html?Error=loginExists");
+            header("location: signup.php?Error=loginExists");
             exit();
         }
 
         create_user($conn, $first_name, $last_name, $email, $user_name, $password, $roleid = 'role02');
 
-
-
-
-
     }
 
     else
     {
-        header('location: signup.html');
+        header('location: signup.php');
     }

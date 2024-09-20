@@ -33,14 +33,14 @@ function invalidUserName($user_name)
 function loginExists($conn, $user_name, $email)
 {
 
-    $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
+    $sql = "SELECT * FROM user WHERE user_name = ? OR email = ?;";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location:signup.html?error=stmtfailed");
+        header("Location:signup.php?error=stmtfailed");
         exit();
     }
-    mysqli_stmt_bind_param($stmt, "ss", $username, $email);
+    mysqli_stmt_bind_param($stmt, "ss", $user_name, $email);
     mysqli_stmt_execute($stmt);
 
     $resultData = mysqli_stmt_get_result($stmt);
@@ -53,26 +53,72 @@ function loginExists($conn, $user_name, $email)
     
     mysqli_stmt_close($stmt);
 }
+
 function create_user($conn, $first_name, $last_name, $email, $user_name, $password, $roleid = 'role02')
 {
 
-    $sql = "INSERT INTO user (firstname, last_name, email, user_address, phone, user_name, user_password, role_id) VALUES(?,?,?,?,?,?,?,?);";
+    $sql = "INSERT INTO user (first_name, last_name, email, user_address, phone, user_name, user_password, role_id) VALUES(?,?,?,?,?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
 
     $user_address = null;
     $phone = null;
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location:signup.html?error=stmtfailed");
+        header("Location:signup.php?error=stmtfailed");
         exit();
     }
     mysqli_stmt_bind_param($stmt, "ssssssss", $first_name, $last_name, $email, $user_address, $phone, $user_name, $password, $roleid);
     if (mysqli_stmt_execute($stmt)) {
         // If the query was successful, redirect to the success page
-        header("Location:signin.html?success=accountcreated");
+        header("Location:signin.php?success=accountcreated");
     } else {
         // If the query failed, redirect with an error message
-        header("Location:signup.html?error=executionfailed");
+        header("Location:signup.php?error=executionfailed");
     }
     mysqli_stmt_close($stmt);
+}
+
+function user_login($conn, $user_name, $password)
+{
+    $sql = "SELECT * FROM user WHERE user_name = ? OR email = ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("Location:signin.php?error=stmtfailed");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "ss", $user_name, $user_name);
+    mysqli_stmt_execute($stmt);
+
+    $resultData = mysqli_stmt_get_result($stmt);
+    $row = mysqli_fetch_assoc($resultData);
+   
+    mysqli_stmt_close($stmt);
+
+    if($row == false)
+    {
+        header("Location:signin.php?error=wronglogin");
+        exit();
+    }
+    
+    $userPassword = $row["user_password"];
+    
+    if($userPassword !== $password)
+    {
+        header("Location:signin.php?error=passwordnotmatch");
+        exit();
+    }
+    else
+    {
+        session_start();
+        $_SESSION["user_id"] = $row["user_id"];
+        $_SESSION["first_name"] = $row["first_name"];
+        $_SESSION["last_name"] = $row["last_name"];
+        $_SESSION["email"] = $row["email"];
+        $_SESSION["user_name"] = $row["user_name"];
+        $_SESSION["role_id "] = $row["role_id "];
+
+        header("Location:index.php?success=loginsuccess");
+    }
+
 }

@@ -1,28 +1,16 @@
 <?php
     if(isset($_POST["submit"]))
     {
-        $email = $_POST["email"];
+        $user_name = $_POST["userName"];
         $password = $_POST["password"];
         
         require_once 'config/db_config.php';
+        require_once 'function_php/functions_form.php';
 
-        $sql = "SELECT * FROM user WHERE email='$email' AND user_password='$password'";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) 
-        {
-            // Redirect to user dashboard
-            header("Location: index.html");
-        } 
-        else 
-        {
-        echo "Invalid email or password";
-        }
-
-        $conn->close();
+        user_login($conn, $user_name, $password);
     }
     else
     {
-        header('Location: signin.html');
+        header('Location: signin.php');
     }
-?>
+

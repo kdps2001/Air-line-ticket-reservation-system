@@ -8,11 +8,13 @@ body{
     background: url("../images/bg_image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+   
+    
     
 }
 
 .nav{
-    position: fixed;
+    position: relative;
     top: 0;
     display: flex;
     justify-content: space-around;
