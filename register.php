@@ -16,13 +16,13 @@
 
         if($invalidUserName !== false)
         {
-            header("location: signup.php?Error=invalidUserName");
+            header("location: signup.php?error=invalidUserName");
             exit();
         }
 
         if($loginExists !== false)
         {
-            header("location: signup.php?Error=loginExists");
+            header("location: signup.php?error=loginExists");
             exit();
         }
 

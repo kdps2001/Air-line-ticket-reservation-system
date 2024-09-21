@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky wave</title>
-    <link rel="stylesheet" href="styles/web_style.css">
+    <link rel="stylesheet" href="styles/header_styles.css">
+    <link rel="stylesheet" href="styles/footer_styles.css">
     <?php
     if (isset($additionalCSS)) {
         foreach ($additionalCSS as $cssFile) {
@@ -36,10 +37,13 @@
             </ul>
         </div>
         <?php
-            if(isset($_SESSION["user_name"]))
+            if(isset($_SESSION["user_id"]))
             {
-                echo "<h1>" . $_SESSION["user_name"] . "</h1>";
-
+                echo '<div class="user-info">';
+                echo "<p>Welcome " . $_SESSION["user_name"] . "</p>";
+                echo '<button class="btn profile" onclick="window.location.href=\'profile.php\'">Profile</button>';
+                echo '<button class="btn logout" onclick="window.location.href=\'logout.php\'">Logout</button>';
+                echo '</div>';
             }
             else
             {

@@ -1,7 +1,9 @@
 <?php
 $additionalCSS = ["styles/signin_up_style.css"];
 include 'header.php';
+require_once 'function_php/functions_form.php';
 ?>
+
     <div class="form-container">
         <div class="form-box">
             <h2>Create Account</h2>
@@ -37,7 +39,12 @@ include 'header.php';
                     <input type="password" id="repassword" name="repassword" required>
                 </div>
                 <!-- error message  -->
-                <p id="error-msg" style="color: red; text-align: center;"></p>
+                <p class ="error_msg" id="error_msg" >
+                <?php if(isset($_GET["error"])) 
+                { 
+                    echo error_masseges($_GET["error"]); 
+                } ?> </p>
+                
 
                 <div class="input-group">
                     <button type="submit" name = "submit" class="btn">Register</button>
@@ -51,15 +58,16 @@ include 'header.php';
         function validateForm() {
             const password = document.getElementById('password').value;
             const repassword = document.getElementById('repassword').value;
-            const errorMsg = document.getElementById('error-msg');
+            const errorMsg = document.getElementById('error_msg');
 
             if (password !== repassword) {
                 errorMsg.textContent = "Passwords do not match!";
                 return false;  
             }
-            errorMsg.textContent = ""; 
             return true; 
         }
     </script>
-</body>
-</html>
+
+<?php
+include 'footer.php';
+?>

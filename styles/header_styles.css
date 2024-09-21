@@ -8,7 +8,9 @@ body{
     background: url("../images/bg_image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-   
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     
     
 }
@@ -45,8 +47,8 @@ body{
     border-bottom: 2px solid #fff;
 }
 
-.nav-button .btn{
-    width: 130px;
+.nav-button .btn, .user-info .btn{
+    width: 120px;
     height: 40px;
     font-weight: 500;
     background: rgba(255, 255, 255, 0.87);
@@ -54,8 +56,22 @@ body{
     border-radius: 30px;
     cursor: pointer;
     transition: .3s ease;
-    margin-left: 15px;
+    margin-left: 10px;
 }
-.btn:hover{
+.nav-button .btn:hover, .user-info .btn:hover{
     background: rgba(255, 255, 255, 0.459);
 }
+
+.user-info {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.user-info p {
+    margin-right: 20px;
+}
+

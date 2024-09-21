@@ -122,3 +122,36 @@ function user_login($conn, $user_name, $password)
     }
 
 }
+function error_masseges($getpart)
+{
+    if(isset($getpart))
+                {
+                    
+                    if($getpart =="stmtfailed")
+                    {
+                        return 'Database Error : stmt fails';
+                    
+                    }
+                    if($getpart =="invalidUserName")
+                    {
+                        return 'Invalid User Name <BR> Use only - [a-z , A-Z, 0 - 9]';
+                    }
+                    if($getpart =="loginExists")
+                    {
+                        return 'User Name or Email already used';
+                    }
+                    if($getpart =="executionfailed")
+                    {
+                        return 'Database Error : query failed';
+                    }
+                    if($getpart =="wronglogin")
+                    {
+                        return 'User name/email not exists';
+                    }
+                    if($getpart =="passwordnotmatch")
+                    {
+                        return 'wrong password';
+                    }
+
+                }
+}

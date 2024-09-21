@@ -13,6 +13,7 @@
     border-radius: 10px;
     color: white;
     width: 350px;
+    margin: 40px 0px 100px 0px;
     
 }
 
@@ -24,7 +25,7 @@
 
 .input-group {
     margin-bottom: 20px;
-}
+}s
 
 .input-group label {
     display: block;
@@ -66,4 +67,8 @@
 
 .go_in_up{
     margin-top: 20px;
+}
+.error_msg {
+    color: red;
+    text-align: center;
 }

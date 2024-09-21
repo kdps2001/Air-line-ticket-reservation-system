@@ -1,7 +1,8 @@
-
 <?php
-$additionalCSS = ["styles/signin_up_style.css"];
-include 'header.php';
+    $additionalCSS = ["styles/signin_up_style.css"];
+    include 'header.php';
+    require_once 'function_php/functions_form.php';
+
 ?>
     <div class="form-container">
         <div class="form-box">
@@ -16,11 +17,19 @@ include 'header.php';
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" required>
                 </div>
-               
+
+                    <!-- error message  -->
+                <p class ="error_msg" id="error_msg" >
+                <?php if(isset($_GET["error"])) 
+                { 
+                    echo error_masseges($_GET["error"]); 
+                } ?> </p>   
+
                 <button type="submit" name = "submit" class="btn">Log In</button>
             </form>
             <p class="go_in_up">Don't have an account ?  <a href="signup.php">Register</a></p>
         </div>
     </div>
-</body>
-</html>
+<?php
+    include 'footer.php';
+?>
