@@ -8,6 +8,9 @@ function user_access_check($role)
         exit();
     }
 
-    if($role !== '')
-
+    if($role == 'role00')
+    {
+        header('Location: ../index.php');
+        exit();
+    }
 }

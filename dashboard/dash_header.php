@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once 'dash_functions.php';
-    user_access_check($_SESSION["role_id"]);
+    user_access_check($_SESSION["role_id"],);
 ?>
 
 <!DOCTYPE html>

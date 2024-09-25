@@ -54,7 +54,7 @@ function loginExists($conn, $user_name, $email)
     mysqli_stmt_close($stmt);
 }
 
-function create_user($conn, $first_name, $last_name, $email, $user_name, $password, $roleid = 'role02')
+function create_user($conn, $first_name, $last_name, $email, $user_name, $password, $roleid = 'role00')
 {
 
     $sql = "INSERT INTO user (first_name, last_name, email, user_address, phone, user_name, user_password, role_id) VALUES(?,?,?,?,?,?,?,?);";
