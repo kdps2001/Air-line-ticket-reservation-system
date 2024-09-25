@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 ?>
-12345
+123
 <?php
 include 'footer.php';
 ?>
