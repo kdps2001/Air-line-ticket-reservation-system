@@ -19,7 +19,7 @@ function invalidUserName($user_name)
 
  /*   function loginExists($conn, $username, $email) {
         $sql = "SELECT * FROM users WHERE usersUid='$username' OR usersEmail='$email';";
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($conn, $sql);  //$result = $conn->query($sql);
 
         if ($row = mysqli_fetch_assoc($result)) {
             return $row;
@@ -125,9 +125,14 @@ function user_login($conn, $user_name, $password)
     {
         header("Location:index.php?success=loginsuccess");
     }
-    else
+    elseif($row["role_id"] == 'role01' || $row["role_id"] == 'role02' || $row["role_id"] == 'role03' || $row["role_id"] == 'role004' )
     {
         header("Location:dashboard/dashboard.php?success=loginsuccess");
+    }
+    else
+    {
+        header("Location:login.php?error=invalid_role");
+        exit();
     }
 
 }
