@@ -54,7 +54,7 @@ function loginExists($conn, $user_name, $email)
     mysqli_stmt_close($stmt);
 }
 
-function create_user($conn, $first_name, $last_name, $email, $user_name, $password, $roleid = 'role02')
+function create_user($conn, $first_name, $last_name, $email, $user_name, $password, $roleid = 'role00')
 {
 
     $sql = "INSERT INTO user (first_name, last_name, email, user_address, phone, user_name, user_password, role_id) VALUES(?,?,?,?,?,?,?,?);";
@@ -97,7 +97,7 @@ function user_login($conn, $user_name, $password)
 
     if($row == false)
     {
-        header("Location:signin.php?error=wronglogin");
+        header("Location:signin.php?error=usernamenotexists");
         exit();
     }
     
@@ -116,9 +116,18 @@ function user_login($conn, $user_name, $password)
         $_SESSION["last_name"] = $row["last_name"];
         $_SESSION["email"] = $row["email"];
         $_SESSION["user_name"] = $row["user_name"];
-        $_SESSION["role_id "] = $row["role_id "];
+        $_SESSION["role_id"] = $row["role_id"];
 
         header("Location:index.php?success=loginsuccess");
+    }
+
+    if($row["role_id"] == 'role00')
+    {
+        header("Location:index.php?success=loginsuccess");
+    }
+    else
+    {
+        header("Location:dashboard/dashboard.php?success=loginsuccess");
     }
 
 }
@@ -144,7 +153,7 @@ function error_masseges($getpart)
                     {
                         return 'Database Error : query failed';
                     }
-                    if($getpart =="wronglogin")
+                    if($getpart =="usernamenotexists")
                     {
                         return 'User name/email not exists';
                     }

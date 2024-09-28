@@ -26,7 +26,7 @@
             exit();
         }
 
-        create_user($conn, $first_name, $last_name, $email, $user_name, $password, $roleid = 'role02');
+        create_user($conn, $first_name, $last_name, $email, $user_name, $password, $roleid = 'role00');
 
     }
 
