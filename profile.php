@@ -6,7 +6,7 @@ include 'header.php';
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="profile_styles.css">
+    <link rel="stylesheet" href="styles/profile_styles.css">
     <title>User Profile</title>
 </head>
 
