@@ -11,7 +11,7 @@ include 'header.php';
 </head>
 
 <body>
-    <h3 class="wel"><marquee direction="right">Welcome To SKY WAVE AIRLINES</marquee></h3>
+    <h3><marquee direction="right">Welcome To SKY WAVE AIRLINES</marquee></h3>
     <br><br>
     <form>
          <fieldset>
