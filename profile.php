@@ -11,7 +11,8 @@ include 'header.php';
 </head>
 
 <body>
-   
+
+<br>
     <div class="container">
           <!-- Left Profile Section -->
           <div class="profile">
@@ -25,10 +26,16 @@ include 'header.php';
            </div>
            <div class="profile-details">
                <h2 class = "details">Details</h2><br><br>
-               <p>Name: </p><br>
-               <p>Email: </p> <br>
-               <p>Phone No: </p> <br>
-               <p>Address: </p>
+               <?php
+                if(isset($_SESSION["user_id"]))
+                {
+            
+                    echo "<p>User Name : " . $_SESSION["user_name"] . "</p><br>";
+                    echo "<p>Email :  " . $_SESSION["email"] . "</p><br>";
+                    echo "<p>Phone No :  " . $_SESSION["user_name"] . "</p><br>";
+                    echo "<p>Address :  " . $_SESSION["user_name"] . "</p><br>";
+                }
+                ?>
            </div>
          </div>
      
@@ -58,7 +65,7 @@ include 'header.php';
      
            </fieldset>
          </form>
-       </div>
+       </div><br><br>
  
 </body>
 
