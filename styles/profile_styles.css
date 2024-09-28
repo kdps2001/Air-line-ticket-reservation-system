@@ -9,6 +9,15 @@ fieldset{
 
 }
 
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 160vh;
+    background: rgba(39, 39, 39, 0.4);
+}
+
+
 .container {
     display: flex;
     gap: 30px;
