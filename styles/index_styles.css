@@ -1,0 +1,105 @@
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+fieldset{
+    width: 50%;
+    border-style:ridge;
+    border-color: #2c2927;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 18px;
+    margin:auto;
+    background-color: #d9d9d9d7;
+
+    
+}
+.book-btn{
+    background-color: #ebeaf1;
+}
+
+.book-btn , .mng-btn , .check-btn{
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 18px;
+    padding: 7px;
+}
+
+
+.check-btn:hover {
+    background-color: #0669e1;
+}
+.mng-btn:hover{
+    background-color: #0068e7;
+}
+
+
+.submitbtn{
+    background-color: #d25f00;
+    color: #fff;
+    border-color: #00034fdc;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+    align-items: center;
+    font-size: 25px;
+    padding: 5px;
+}
+    
+
+
+.loc1{
+    width: 31%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.loc2{
+    width: 31%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.date{
+    width: 31%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.pc{
+    width: 31%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+
+h3{
+    position: relative;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@keyframes example {
+    0%   {color:rgb(0, 229, 255); }
+    50%  {color:rgb(59, 53, 243); }
+    100%  {color:rgb(244, 146, 0);}
+
+  }
