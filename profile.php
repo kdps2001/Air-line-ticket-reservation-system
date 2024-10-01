@@ -1,16 +1,7 @@
 <?php
+ $additionalCSS = ["styles/profile_styles.css"];
 include 'header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <link rel="stylesheet" href="styles/profile_styles.css">
-    <title>User Profile</title>
-</head>
-
-<body>
 
 <br>
     <div class="container">
@@ -39,7 +30,7 @@ include 'header.php';
            </div>
          </div>
      
-         <form>
+         <form action = "php.php" method = "post">
            <fieldset> <legend>Edit Profile</legend>
              First Name : &emsp; &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp;
              Last Name : <br>
@@ -59,16 +50,15 @@ include 'header.php';
              Description :<br>
                    <textarea id = "description" rows="7" cols="72"></textarea><br><br>
 
-                   <input type="button" class="submitbtn" value ="Cancel" id="submitBtn" > &nbsp;
-                   <input type="submit" class="submitbtn" value ="Save Changes" id="submitBtn" >
+                   <input type="reset" class="resetbtn" value ="Cancel" > &nbsp;
+                   <input type="submit" class="submitbtn" value ="Save Changes">
      
      
            </fieldset>
+           
          </form>
        </div><br><br>
- 
-</body>
-
+      
 <?php
 include 'footer.php';
 ?>

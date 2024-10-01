@@ -120,8 +120,15 @@ input , textarea{
     background-color: #d4d4d4b7;
 }
 
-.submitbtn{
+.submitbtn,.resetbtn{
     border-radius: 6px;
     background-color: #d4d4d4b7;
     padding:5px ;
+}
+
+.submitbtn:hover {
+    background-color: #76ff98;
+}
+.resetbtn:hover{
+    background-color: #ff7878;
 }

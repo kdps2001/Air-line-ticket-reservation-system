@@ -30,6 +30,15 @@ fieldset{
     padding: 7px;
 }
 
+
+.check-btn:hover {
+    background-color: #0669e1;
+}
+.mng-btn:hover{
+    background-color: #0068e7;
+}
+
+
 .submitbtn{
     background-color: #d25f00;
     color: #fff;
