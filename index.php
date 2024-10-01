@@ -1,16 +1,6 @@
 <?php
 include 'header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <link rel="stylesheet" href="styles/index_styles.css">
-    <title>Home Page</title>
-</head>
-
-<body>
     <h3><marquee direction="right">Welcome To SKY WAVE AIRLINES</marquee></h3>
     <br><br>
     <form>
@@ -76,10 +66,6 @@ include 'header.php';
         </fieldset> <br><br><br>
     </form>
     
-
-</body>
-
-
 <?php
 include 'footer.php';
 ?>
