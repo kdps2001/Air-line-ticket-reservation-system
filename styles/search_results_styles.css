@@ -1,0 +1,93 @@
+body{
+    font-family:'Poppins', sans-serif;
+   color: white;
+}
+
+
+
+.searchbox{
+    width: 40%;
+    height: 350px;
+    padding:10px;
+    border-radius: 20px;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    
+}
+.booking-details{
+    background-color: #d9d9d9d7;
+    width: 40%;
+    height: 190px;
+    padding:10px;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    border-radius: 20px;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+h1{
+    font-size: 33px;
+    
+}
+
+h2{
+    font-size: 28px;
+
+}
+h3{
+    font-size: 18px;
+
+}
+.continue-button {
+    background-color: #8dc0ff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 25px;
+    margin-left: 1200px;
+    transition: 0.5s;
+    cursor:pointer;
+    
+}
+.continue-button:hover {
+    background-color: #6affdc;
+    
+
+}
+.selectflight{
+    display: block;
+    width: auto;
+    height:500px;
+    background-color: #d9d9d9d7;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+.fl{
+    height: 110px;
+    width: 110px;
+    background-color:rgba(173, 216, 230, 0.849);
+    border-radius: 10px;
+    transition: 0.5s;
+    font-size: medium;
+    font-weight: bold;
+    cursor:pointer;
+}
+.fl:hover{
+    background-color:rgb(61, 61, 225);
+
+}

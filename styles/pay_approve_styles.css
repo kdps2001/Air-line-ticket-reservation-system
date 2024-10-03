@@ -1,0 +1,36 @@
+table  {
+    border:1px solid black;
+    border-radius: 10px;
+    padding: 15px; ;
+    width: 80%;
+    background-color: #ffffff46;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+
+th,td{
+    width:15%;
+    font-size: 30px;
+    border:1px solid black;
+    padding: 1px;
+}
+
+
+.approvebtn{
+    background-color: #353a35;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 75px; 
+    margin-bottom:5PX ;
+   
+}
+
+.approvebtn:hover {
+    background-color: #45a049;
+    
+}
+
+
