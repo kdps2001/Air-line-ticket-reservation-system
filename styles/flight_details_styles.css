@@ -1,0 +1,67 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+fieldset{
+    background-color: #ffffff46;
+    width: 750px;
+    border-color: +000000;
+    border-radius: 10px;
+    padding: 25px;
+    font-size: 20px;
+
+}
+.container{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    background-color: #ffffff46;
+    border-radius: 8px;
+    width : 800px;
+    border-color: #000000;
+    border-style: double;
+    margin: auto;
+}
+
+
+.fname,.airlines,.destination,.ftime,.fdate{
+    width: 35%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+input , textarea{
+    border-radius: 6px;
+    font-size: 18px;
+  
+}
+
+.submitbtn{
+    border-radius: 6px;
+    background-color: #d4d4d4b7;
+    padding:5px ;
+    cursor: pointer;
+}
+
+.cancelbtn{
+    border-radius: 6px;
+    background-color: #d4d4d4b7;
+    padding:5px ;
+    cursor: pointer;
+}
+
+
+.submitbtn:hover {
+    background-color: #92ff98;  
+}
+
+.cancelbtn:hover{
+    background-color: #ff9590;
+}

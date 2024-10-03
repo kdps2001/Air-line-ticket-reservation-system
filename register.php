@@ -4,6 +4,8 @@
         $first_name = $_POST["firstname"];
         $last_name = $_POST["lastname"];
         $email = $_POST["email"];
+        $phone = $_POST["phone"];
+        $address = $_POST["address"];
         $user_name = $_POST["username"];
         $password = $_POST["password"];
         
