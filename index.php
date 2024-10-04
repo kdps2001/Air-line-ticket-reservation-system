@@ -2,10 +2,6 @@
  $additionalCSS = ["styles/index_styles.css"];
 include 'header.php';
 ?>
-<<<<<<< HEAD
-
-=======
->>>>>>> 00aeb0358f88a8d6a4bee0adae676f3d4b831a83
     <h3><marquee direction="right">Welcome To SKY WAVE AIRLINES</marquee></h3>
     <br><br>
     <form>
