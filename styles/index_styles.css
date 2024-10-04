@@ -15,11 +15,11 @@ fieldset{
     font-size: 18px;
     margin:auto;
     background-color: #d9d9d9d7;
-
-    
 }
+
 .book-btn{
-    background-color: #ebeaf1;
+    background-color: #85bcff;
+    margin-left: 50px;
 }
 
 .book-btn , .mng-btn , .check-btn{
@@ -29,18 +29,25 @@ fieldset{
     font-size: 18px;
     padding: 7px;
 }
+.mng-btn{
+    margin-left: 100px;
+}
 
+.check-btn{
+    margin-left: 100px;
+}
 
 .check-btn:hover {
-    background-color: #0669e1;
+    background-color: #85bcff;
+    
 }
 .mng-btn:hover{
-    background-color: #0068e7;
+    background-color: #85bcff;
 }
 
 
 .submitbtn{
-    background-color: #d25f00;
+    background-color: #6ab7ff;
     color: #fff;
     border-color: #00034fdc;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -50,7 +57,11 @@ fieldset{
     font-size: 25px;
     padding: 5px;
 }
-    
+
+
+.submitbtn:hover {
+    background-color: #167fff;
+}
 
 
 .loc1{
@@ -63,7 +74,7 @@ fieldset{
 }
 
 .loc2{
-    width: 31%;
+    width: 70%;
     padding: 7px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -81,7 +92,7 @@ fieldset{
 }
 
 .pc{
-    width: 31%;
+    width: 70%;
     padding: 7px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -89,17 +100,32 @@ fieldset{
     border-radius: 6px;
 }
 
-
-h3{
-    position: relative;
-    animation-name: example;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.from{
+    margin-left: 50px;
+    margin-top: 10px;
+  
 }
-@keyframes example {
-    0%   {color:rgb(0, 229, 255); }
-    50%  {color:rgb(59, 53, 243); }
-    100%  {color:rgb(244, 146, 0);}
 
-  }
+.to{
+    margin-left: 420px;
+    margin-top: -52px;
+    margin-bottom:20px ;
+    
+}
+
+.pscount{
+    margin-left: 420px;
+    margin-top: -52px;
+}
+.dates{
+    margin-left: 50px;
+}
+
+.trip{
+    margin-left: 50px;
+}
+
+.subbtn{
+    margin-left: 570px;
+    margin-top: -30px;
+}

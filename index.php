@@ -2,20 +2,24 @@
  $additionalCSS = ["styles/index_styles.css"];
 include 'header.php';
 ?>
+<<<<<<< HEAD
     <h3><marquee direction="right">Welcome To SKY WAVE AIRLINES</marquee></h3>
     <br><br>
+=======
+>>>>>>> b202eef42b0538fbdcbf9f695e2b473466b94a24
     <form>
          <fieldset>
             <br>
-                <div class="booking_buttons">  &emsp; &emsp;
-                <button class="book-btn" href="#">BOOK A TRIP</button> &emsp; &emsp; &emsp; &emsp;&emsp; 
-                <button class="mng-btn" href="#">MANAGE BOOKING</button> &emsp; &emsp; &emsp; &emsp;&emsp;&nbsp;&nbsp;
-                <button class="check-btn" href="#">CHECK IN</button>
-                 </div><br> &emsp; 
+                <div> 
+                <button class="book-btn" href="#">BOOK A TRIP</button>
+                <button class="mng-btn" href="#">MANAGE BOOKING</button>
+                <a href="checkin.php">
+                <button type ="button" class="check-btn" onclick="window.location.href='checkin.php'">CHECK IN</button></a>
+                 </div><br> 
         
-        
-                    <img src ="img/from.png" width="12" height="10">  From :
-                    <select name="from" id="from"class="loc1">
+                    <div class="from">
+                    From :
+                    <select name="from" class="loc1">
                         <option> Choose Option <Option> 
                         <option>SriLanka</option>
                         <option>Australia</option>
@@ -24,11 +28,12 @@ include 'header.php';
                         <option>Japan</option>
                         <option>Malaysia</option>
                     </select>
+                    </div>
+                
         
-                    &emsp; &emsp; &emsp; &emsp;&nbsp;&nbsp;
-        
-                    <img src ="img/to.png" width="14" height="11"> To&nbsp;:
-                    <select name="to" id="to"class="loc2">
+                    <div class="to">
+                        TO :
+                    <select name="to" class="loc2">
                         <option>Choose Option &emsp; <option> 
                          <option>SriLanka</option>
                         <option>Australia</option>
@@ -36,15 +41,15 @@ include 'header.php';
                         <option>China</option>
                         <option>Japan</option>
                         <option>Malaysia</option>
-                    </select> <br><br> &emsp; 
-        
-                    <img src ="img/calander.png" width="14" height="11">
+                    </select>
+                    </div>
+                    <div class = "dates">
                     <label for="date">Date &nbsp;:</label>
                     <input type="date" class="date" id="date" name="date">
-                    
-                    &emsp; &emsp; &emsp;  &emsp;
-        
-                    <img src ="img/pass.png" width="14" height="11"> PC :
+                    </div>
+
+                    <div class="pscount">
+                   PC :
                     <select name="to" id="to" class="pc">
                         <option>Passenger Count &nbsp;<Option> 
                         <option>1</option>
@@ -52,17 +57,15 @@ include 'header.php';
                         <option>3</option>
                         <option>4</option>
                         <option>5</option>
-                    </select> <br><br>&emsp; &emsp;
-        
-                    <input type = "radio" value="rt" name="trip">One Way &emsp;
+                    </select> 
+                </div><br>
+                    <div class="trip">
+                    <input type = "radio" value="rt" name="trip" >One Way &emsp;
                     <input type = "radio" value="ow" name="trip">Round Trip
-        
-                    &emsp; &emsp; &emsp; &emsp;&emsp; &emsp;&emsp;&emsp;&nbsp;&nbsp;
-        
-                    <input type ="checkbox" class = "inputStyle" id="checkbox"> Flexible Dates 
-                    &emsp;
-                    <input type="submit" class="submitbtn" value ="&nbsp; Search &nbsp;" id="submitBtn" > 
-            <br><br>
+                    </div>
+                    <div class="subbtn">
+                    <input type="button"  class="submitbtn" onclick="window.location.href='search_results.php'" value ="&nbsp; Search &nbsp;" > 
+                    </div>
         
         </fieldset> <br><br><br>
     </form>

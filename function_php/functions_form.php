@@ -115,6 +115,8 @@ function user_login($conn, $user_name, $password)
         $_SESSION["first_name"] = $row["first_name"];
         $_SESSION["last_name"] = $row["last_name"];
         $_SESSION["email"] = $row["email"];
+        $_SESSION["phone"] = $row["phone"];
+        $_SESSION["user_address"] = $row["user_address"];
         $_SESSION["user_name"] = $row["user_name"];
         $_SESSION["role_id"] = $row["role_id"];
 

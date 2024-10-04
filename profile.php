@@ -23,8 +23,8 @@ include 'header.php';
             
                     echo "<p>User Name : " . $_SESSION["user_name"] . "</p><br>";
                     echo "<p>Email :  " . $_SESSION["email"] . "</p><br>";
-                    echo "<p>Phone No :  " . $_SESSION["user_name"] . "</p><br>";
-                    echo "<p>Address :  " . $_SESSION["user_name"] . "</p><br>";
+                    echo "<p>Phone No :  " . $_SESSION["phone"] . "</p><br>";
+                    echo "<p>Address :  " . $_SESSION["user_address"] . "</p><br>";
                 }
                 ?>
            </div>
@@ -34,18 +34,18 @@ include 'header.php';
            <fieldset> <legend>Edit Profile</legend>
              First Name : &emsp; &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp;
              Last Name : <br>
-                   <input type = "text" class = "name" name="name" placeholder="Ex : Ruwan" > &emsp; &emsp;&nbsp; &nbsp;
-                   <input type = "text" class = "name" name="name" placeholder="Ex : Karunarathne" > <br><br>
+                   <input type = "text" class = "name" name="name" value="<?php echo $_SESSION['first_name']; ?>" > &emsp; &emsp;&nbsp; &nbsp;
+                   <input type = "text" class = "name" name="name" value="<?php echo $_SESSION['last_name']; ?>" > <br><br>
 
              DOB : <br>
-             <input type = "date" name="age" class = "age" placeholder="ex : 35" pattern="[0-9]{2}1"> <br><br>
+             <input type = "date" name="age" class = "age"  pattern="[0-9]{2}1"> <br><br>
 
              Address :<br>
-                   <textarea id = "address"class = "address" rows="6" cols="72"></textarea><br><br>
+                   <textarea id = "address"class = "address" rows="6" cols="72"><?php echo $_SESSION['user_address']; ?></textarea><br><br>
      
              Mobile No : &emsp; &emsp; &emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&nbsp;&nbsp; Email : <br>
-                   <input type = "phone" class = "mno" name="mobile" placeholder="+94 77xxxxxxx" pattern="[0-9]{10}" required>&emsp;&emsp; &emsp;
-                   <input type = "email" class = "email" name="email" placeholder="abc@gmail.com" pattern="[a-z][@.][0-9]"><br><br>
+                   <input type = "phone" class = "mno" name="mobile" value="<?php echo $_SESSION['phone']; ?>" pattern="[0-9]{10}" required>&emsp;&emsp; &emsp;
+                   <input type = "email" class = "email" name="email" value="<?php echo $_SESSION['email']; ?>" pattern="[a-z][@.][0-9]"><br><br>
      
              Description :<br>
                    <textarea id = "description" rows="7" cols="72"></textarea><br><br>
