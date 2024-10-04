@@ -32,26 +32,51 @@ include 'header.php';
      
          <form action = "php.php" method = "post">
            <fieldset> <legend>Edit Profile</legend>
-             First Name : &emsp; &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp;
-             Last Name : <br>
-                   <input type = "text" class = "name" name="name" value="<?php echo $_SESSION['first_name']; ?>" > &emsp; &emsp;&nbsp; &nbsp;
-                   <input type = "text" class = "name" name="name" value="<?php echo $_SESSION['last_name']; ?>" > <br><br>
+              <div class="fnamebox">
+                  First Name : 
+              <input type = "text" class = "fname" name="name" value="<?php echo $_SESSION['first_name']; ?>" >
+              </div>
+            
+              <div class="lnamebox">
+                   Last Name :
+                   <input type = "text" class = "lname" name="name" value="<?php echo $_SESSION['last_name']; ?>" >
+              </div>
 
-             DOB : <br>
-             <input type = "date" name="age" class = "age"  pattern="[0-9]{2}1"> <br><br>
+            <div class="dobbox">      
+                 DOB : 
+                <input type = "date" name="age" class = "age"  pattern="[0-9]{2}1">
+            </div>
 
+            <div class="addressbox">
              Address :<br>
-                   <textarea id = "address"class = "address" rows="6" cols="72"><?php echo $_SESSION['user_address']; ?></textarea><br><br>
+                   <textarea id = "address"class = "address" rows="6" cols="72"><?php echo $_SESSION['user_address']; ?></textarea>
+            </div>
      
-             Mobile No : &emsp; &emsp; &emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&nbsp;&nbsp; Email : <br>
-                   <input type = "phone" class = "mno" name="mobile" value="<?php echo $_SESSION['phone']; ?>" pattern="[0-9]{10}" required>&emsp;&emsp; &emsp;
-                   <input type = "email" class = "email" name="email" value="<?php echo $_SESSION['email']; ?>" pattern="[a-z][@.][0-9]"><br><br>
-     
-             Description :<br>
+             Mobile No : 
+                <input type = "phone" class = "mno" name="mobile" value="<?php echo $_SESSION['phone']; ?>" pattern="[0-9]{10}" required>
+             
+            <div class="emailbox">
+             Email :
+                   <input type = "email" class = "email" name="email" value="<?php echo $_SESSION['email']; ?>" pattern="[a-z][@.][0-9]">
+            </div>
+
+             Description :
                    <textarea id = "description" rows="7" cols="72"></textarea><br><br>
 
-                   <input type="reset" class="resetbtn" value ="Cancel" > &nbsp;
+            <div class="cpass">
+             Current Password :
+                   <input type = "password" class = "password" name="password" value="">
+            </div>
+
+            <div class="npass">
+             New Password :
+                   <input type = "password" class = "password" name="password" value="">
+            </div><br>
+
+                   <input type="reset" class="resetbtn" value ="Cancel" >
                    <input type="submit" class="submitbtn" value ="Save Changes">
+
+     
      
      
            </fieldset>

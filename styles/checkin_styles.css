@@ -37,6 +37,7 @@ fieldset{
 
 .check-btn{
     background-color: #85bcff;
+    margin-left: 100px;
 }
 
 
@@ -66,3 +67,12 @@ fieldset{
 .box{
   padding: 10px 50px;
 }
+
+@media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }

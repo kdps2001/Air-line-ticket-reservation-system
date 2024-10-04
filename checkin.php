@@ -6,9 +6,8 @@ include 'header.php';
             <fieldset>
                <br>
                    <div class="booking_buttons">  &emsp; &emsp;
-                   <a href="index.php">
-                   <button type ="button" class="book-btn" onclick="window.location.href='index.php'">BOOK A TRIP</button></a> &emsp; &emsp; &emsp; &emsp;&emsp; 
-                   <button class="mng-btn" href="#">MANAGE BOOKING</button> &emsp; &emsp; &emsp; &emsp;&emsp;&nbsp;&nbsp;
+                   <button type ="button" class="book-btn" onclick="window.location.href='index.php'">BOOK A TRIP</button> &emsp; &emsp; &emsp; &emsp;&emsp; 
+                   <button class="mng-btn" href="#">MANAGE BOOKING</button>
                    <button class="check-btn">CHECK IN</button>
                   
                     </div><br> &emsp; 
