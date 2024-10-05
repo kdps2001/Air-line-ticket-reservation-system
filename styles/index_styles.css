@@ -14,12 +14,21 @@ fieldset{
     padding: 10px;
     font-size: 18px;
     margin:auto;
+
     background-color: #ffffff;
     margin-bottom: 160px;
     margin-top: 100px;
     font-family:'Times New Roman', Times, serif;
     background: url("../images/indexbg.jpg");
     background-size: cover;
+=======
+    background-color: #d9d9d9d7;
+}
+
+.book-btn{
+    background-color: #85bcff;
+    margin-left: 50px;
+
 }
 
 
@@ -34,6 +43,10 @@ fieldset{
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.mng-btn{
+    margin-left: 100px;
+}
+
 
 button:hover {
     background-color: #0056b3;
@@ -47,6 +60,18 @@ button:hover {
 
 .mng-btn{
     margin-left: 10px;
+=======
+.check-btn{
+    margin-left: 100px;
+}
+
+.check-btn:hover {
+    background-color: #85bcff;
+    
+}
+.mng-btn:hover{
+    background-color: #85bcff;
+
 }
 
 .check-btn{
@@ -58,7 +83,11 @@ button:hover {
 
 
 .submitbtn{
+
     background-color: #007bff;
+=======
+    background-color: #6ab7ff;
+
     color: #fff;
     border-color: #00034fdc;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -77,6 +106,14 @@ button:hover {
     background-color: #0056b3;
 }
 
+=======
+
+
+.submitbtn:hover {
+    background-color: #167fff;
+}
+
+
 
 .loc1{
     width: 230px;
@@ -88,7 +125,11 @@ button:hover {
 }
 
 .loc2{
+
     width: 230px;
+=======
+    width: 70%;
+
     padding: 7px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -106,7 +147,11 @@ button:hover {
 }
 
 .pc{
+
     width: 230px;
+=======
+    width: 70%;
+
     padding: 7px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -114,16 +159,20 @@ button:hover {
     border-radius: 6px;
 }
 
+
 .class{
     margin-left: -360px;
     margin-top: 20px;
 }
+
+=======
 
 .from{
     margin-left: 50px;
     margin-top: 10px;
   
 }
+
 
 .to{
     margin-left: 410px;
@@ -198,3 +247,29 @@ border-radius: 6px;
     margin-right: auto;
     
 }
+=======
+
+.to{
+    margin-left: 420px;
+    margin-top: -52px;
+    margin-bottom:20px ;
+    
+}
+
+.pscount{
+    margin-left: 420px;
+    margin-top: -52px;
+}
+.dates{
+    margin-left: 50px;
+}
+
+.trip{
+    margin-left: 50px;
+}
+
+.subbtn{
+    margin-left: 570px;
+    margin-top: -30px;
+}
+

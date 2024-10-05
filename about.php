@@ -3,7 +3,9 @@ $additionalCSS = ["styles/about_styles.css"];
 include 'header.php';
 ?>
 <h1>About Sky Wave</h1>
-<p >
+
+<p>
+
 Welcome to Sky Wave, your premier destination for hassle-free airline ticket reservations. At Sky Wave, we understand the complexities of air travel and are dedicated to simplifying the process for all our customers. Whether you're a seasoned traveler or booking a flight for the first time, our mission is to provide you with a seamless, efficient, and reliable platform for all your airline ticket needs. We aim to take the stress out of travel planning, allowing you to focus on what really matters—enjoying your journey.
 </p>
 <p>

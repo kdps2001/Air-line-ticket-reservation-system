@@ -8,12 +8,17 @@
 fieldset{
     width: 50%;
     border-style:ridge;
+
     border-color: #30c4ff;
     border-radius: 15px;
+    border-color: #2c2927;
+    border-radius: 20px;
+
     padding: 10px;
     font-size: 18px;
     margin:auto;
     background-color: #d9d9d9d7;
+
     background: url("../images/indexbg.jpg");
     background-size: cover;
 }
@@ -55,10 +60,38 @@ button:hover {
     padding: 10px 60px;
     background-color: #0056bf;
 }
+.book-btn{
+    background-color: #ebeaf1;
+}
+
+.book-btn , .mng-btn , .check-btn{
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 18px;
+    padding: 7px;
+}
+
+
+.mng-btn:hover {
+    background-color: #85bcff;
+}
+.book-btn:hover{
+    background-color: #85bcff;
+}
+
+.check-btn{
+    background-color: #85bcff;
+
+}
 
 
 .submitbtn{
+
     background-color: #007bff;
+=======
+    background-color: #85bcff;
+
     color: #fff;
     border-color: #00034fdc;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -66,6 +99,7 @@ button:hover {
     cursor: pointer;
     align-items: center;
     font-size: 25px;
+
     padding: 5px 15px;
     position: fixed;
     right:435px;
@@ -77,6 +111,13 @@ button:hover {
 
 .submitbtn:hover {
     background-color: #0056bf;
+}
+
+
+=======
+    padding: 5px;
+    position: fixed;
+    right:435px;
 }
 
 
@@ -93,6 +134,7 @@ button:hover {
   padding: 10px 50px;
 }
 
+
 @media (max-width: 800px) {
     .row {
       flex-direction: column-reverse;
@@ -101,3 +143,5 @@ button:hover {
       margin-bottom: 20px;
     }
   }
+=======
+

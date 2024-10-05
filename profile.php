@@ -35,6 +35,7 @@ include 'header.php';
      
          <form action = "php.php" method = "post">
            <fieldset> <legend>Edit Profile</legend>
+
               <div class="fnamebox">
                   First Name : 
               <input type = "text" class = "fname" name="name" value="<?php echo $_SESSION['first_name']; ?>" >
@@ -50,10 +51,27 @@ include 'header.php';
                 <input type = "date" name="age" class = "age"  pattern="[0-9]{2}1">
             </div>
 
+             First Name : &emsp; &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp;
+             Last Name : <br>
+                   <input type = "text" class = "name" name="name" value="<?php echo $_SESSION['first_name']; ?>" > &emsp; &emsp;&nbsp; &nbsp;
+                   <input type = "text" class = "name" name="name" value="<?php echo $_SESSION['last_name']; ?>" > <br><br>
+
+             DOB : <br>
+             <input type = "date" name="age" class = "age"  pattern="[0-9]{2}1"> <br><br>
+
+
             <div class="addressbox">
              Address :<br>
+
                    <textarea id = "address"class = "address" rows="6" cols="72"><?php echo $_SESSION['user_address']; ?></textarea>
             </div>
+
+                   <textarea id = "address"class = "address" rows="6" cols="72"><?php echo $_SESSION['user_address']; ?></textarea><br><br>
+     
+             Mobile No : &emsp; &emsp; &emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&nbsp;&nbsp; Email : <br>
+                   <input type = "phone" class = "mno" name="mobile" value="<?php echo $_SESSION['phone']; ?>" pattern="[0-9]{10}" required>&emsp;&emsp; &emsp;
+                   <input type = "email" class = "email" name="email" value="<?php echo $_SESSION['email']; ?>" pattern="[a-z][@.][0-9]"><br><br>
+
      
              Mobile No : 
                 <input type = "phone" class = "mno" name="mobile" value="<?php echo $_SESSION['phone']; ?>" pattern="[0-9]{10}" required>

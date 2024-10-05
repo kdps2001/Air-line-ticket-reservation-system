@@ -76,6 +76,7 @@ body{
 
 .btn_logout{
     background-color: rgb(255, 130, 130);
+
 }
 
 @media (max-width: 800px) {
@@ -86,3 +87,6 @@ body{
       margin-bottom: 20px;
     }
   }
+=======
+}
+

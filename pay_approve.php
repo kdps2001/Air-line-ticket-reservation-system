@@ -19,14 +19,22 @@ include 'header.php';
     <td>###</td>
     <td>###</td>
     <td>###</td>
+
     <td><input type="checkbox" class="approvebtn" value ="Approve"></td>
+
+    <td><input type="button" class="approvebtn" value ="Approve"></td>
+
   </tr>
   <tr>
     <td>###</td>
     <td>###</td>
     <td>###</td>
     <td>###</td>
+
     <td><input type="checkbox" class="approvebtn" value ="Approve"></td>
+
+    <td><input type="button" class="approvebtn" value ="Approve"></td>
+
   </tr>
   <tr>
     <td>###</td>
