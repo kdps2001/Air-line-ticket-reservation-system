@@ -17,11 +17,14 @@ include 'header.php';
                  transaction is crucial for both the payer and the recipient.</p>
         </div>
         </div>
+
         <div class="container2">
         <!-- Center: Payment Form -->
         <div class="payment-form">
             <h2>Online Payment</h2>
-            <form action="#">
+
+            <form action="payment_success.php" method="post">
+
                 <h3>Enter Card Details</h3>
                 <div class="form-group" >
                     <label for="card-number">Card Number:</label>

@@ -8,15 +8,15 @@ include 'header.php';
           <!-- Left Profile Section -->
           <div class="profile">
            <div class="profile-header">
-               <button>&larr;</button>
-               <span>MY PROFILE</span>
-               <button>&#9881;</button>
-           </div>
+           <button type="button" onclick="window.location.href='booking_details.php'" class ="book">MY BOOKING</button>
+              
+           </div><br>
+           <h2>MY PROFILE</h2><br>
            <div class="profile-picture">
                <img src="https://via.placeholder.com/100" alt="Profile">
            </div>
-           <div class="profile-details">
-               <h2 class = "details">Details</h2><br><br>
+                <div class="profile-details">
+               <h2 class = "details">Details</h2><br>
                <?php
                 if(isset($_SESSION["user_id"]))
                 {
@@ -27,6 +27,9 @@ include 'header.php';
                     echo "<p>Address :  " . $_SESSION["user_address"] . "</p><br>";
                 }
                 ?>
+
+               
+
            </div>
          </div>
      
@@ -65,7 +68,7 @@ include 'header.php';
 
             <div class="cpass">
              Current Password :
-                   <input type = "password" class = "password" name="password" value="">
+                   <input type = "password" class = "password" name="password" value="" required>
             </div>
 
             <div class="npass">

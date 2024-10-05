@@ -8,41 +8,57 @@
 fieldset{
     width: 50%;
     border-style:ridge;
-    border-color: #2c2927;
-    border-radius: 20px;
+    border-color: #30c4ff;
+    border-radius: 15px;
     padding: 10px;
     font-size: 18px;
     margin:auto;
     background-color: #d9d9d9d7;
+    background: url("../images/indexbg.jpg");
+    background-size: cover;
 }
 .book-btn{
     background-color: #ebeaf1;
+    margin-left: 50px;
 }
 
-.book-btn , .mng-btn , .check-btn{
-    cursor: pointer;
+
+
+.book-btn , .mng-btn , .check-btn {
+    margin-top: -500px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
     border-radius: 5px;
-    align-items: center;
-    font-size: 18px;
-    padding: 7px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-.mng-btn:hover {
-    background-color: #85bcff;
+button:hover {
+    background-color: #0056b3;
 }
-.book-btn:hover{
-    background-color: #85bcff;
+
+.book-btn{
+   
+    margin-left: 42px;
+    padding: 10px 45px;
+}
+
+.mng-btn{
+    margin-left: 10px;
 }
 
 .check-btn{
-    background-color: #85bcff;
-    margin-left: 100px;
+    margin-left: 10px;
+    padding: 10px 60px;
+    background-color: #0056bf;
 }
 
 
 .submitbtn{
-    background-color: #85bcff;
+    background-color: #007bff;
     color: #fff;
     border-color: #00034fdc;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -50,10 +66,19 @@ fieldset{
     cursor: pointer;
     align-items: center;
     font-size: 25px;
-    padding: 5px;
+    padding: 5px 15px;
     position: fixed;
     right:435px;
+    margin-top: -15px;
+    margin-left: 15PX ;
+
 }
+
+
+.submitbtn:hover {
+    background-color: #0056bf;
+}
+
 
 .check{
         width: 45%;

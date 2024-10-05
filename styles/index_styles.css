@@ -9,50 +9,56 @@
 fieldset{
     width: 50%;
     border-style:ridge;
-    border-color: #2c2927;
-    border-radius: 20px;
+    border-color: #00c8ff;
+    border-radius: 15px;
     padding: 10px;
     font-size: 18px;
     margin:auto;
-    background-color: #d9d9d9d7;
+    background-color: #ffffff;
     margin-bottom: 160px;
     margin-top: 100px;
     font-family:'Times New Roman', Times, serif;
-    
-    
+    background: url("../images/indexbg.jpg");
+    background-size: cover;
+}
+
+
+.book-btn , .mng-btn , .check-btn {
+    margin-top: -500px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 .book-btn{
-    background-color: #85bcff;
-    margin-left: 50px;
+    background-color: #0056bf;
+    margin-left: 42px;
+    padding: 10px 45px;
 }
 
-.book-btn , .mng-btn , .check-btn{
-    cursor: pointer;
-    border-radius: 5px;
-    align-items: center;
-    font-size: 18px;
-    padding: 7px;
-}
 .mng-btn{
-    margin-left: 100px;
+    margin-left: 10px;
 }
 
 .check-btn{
-    margin-left: 100px;
+    margin-left: 10px;
+    padding: 10px 60px;
 }
 
-.check-btn:hover {
-    background-color: #85bcff;
-    
-}
-.mng-btn:hover{
-    background-color: #85bcff;
-}
+
 
 
 .submitbtn{
-    background-color: #6ab7ff;
+    background-color: #007bff;
     color: #fff;
     border-color: #00034fdc;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -60,12 +66,15 @@ fieldset{
     cursor: pointer;
     align-items: center;
     font-size: 25px;
-    padding: 5px;
+    padding: 5px 15px;
+    text-align:center;
+    margin-top: -5px;
+    margin-left:10PX ;
 }
 
 
 .submitbtn:hover {
-    background-color: #167fff;
+    background-color: #0056b3;
 }
 
 

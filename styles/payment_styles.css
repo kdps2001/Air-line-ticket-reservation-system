@@ -127,8 +127,15 @@ button {
 
 .cancel {
     font-size:18px;
-    background-color:rgb(197, 52, 52);
+    background-color:rgb(173, 59, 59);
     color:#fff;
+}
+
+.cancel:hover{
+    background-color: #ff0000;
+}
+.pay:hover{
+    background-color: #00bf13;
 }
 
 .pay {

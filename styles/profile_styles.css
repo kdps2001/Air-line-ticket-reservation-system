@@ -79,6 +79,26 @@ fieldset{
     margin-bottom: 8px;
 }
 
+.book{
+    width: 600px;
+    border-radius: 5px;
+    background-color: #92dae3f2;
+    padding:10px 10px ;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 0px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.book:hover {
+    background-color: #00d9ff;
+}
+
+h2{
+    text-align: center;
+    color: #060132;
+}
+
 
 /* Importing Google font - Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
@@ -144,6 +164,7 @@ input , textarea{
     border-radius: 6px;
     background-color: #d4d4d4b7;
     padding:5px ;
+    cursor: pointer;
 }
 
 .submitbtn{
@@ -178,4 +199,8 @@ input , textarea{
 .npass{
     margin-left: 360px;
     margin-top: -55px;
+}
+
+.details{
+    text-align: center;
 }
