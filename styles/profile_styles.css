@@ -7,8 +7,8 @@
 
 fieldset{
     background-color: #d9d9d93b;
-    width: 650px;
-    border-color: +000000;
+    width:750px;
+    border-color:#000000;
     border-radius: 10px;
     padding: 25px;
     font-size: 20px;
@@ -22,16 +22,21 @@ fieldset{
     padding: 20px;
     background-color: #dddddd73;
     border-radius: 8px;
-    width : 1100px;
+    width : 1150px;
     border-color: #000000;
     border-style: double;
     margin: auto;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
 }
 
 
 /* Left Profile Section */
 .profile {
-    width: 300px;
+    width: 320px;
     background-color: #eeeeee31;
     padding: 15px;
     border-color: #000000;
@@ -74,6 +79,26 @@ fieldset{
     margin-bottom: 8px;
 }
 
+.book{
+    width: 600px;
+    border-radius: 5px;
+    background-color: #92dae3f2;
+    padding:10px 10px ;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 0px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.book:hover {
+    background-color: #00d9ff;
+}
+
+h2{
+    text-align: center;
+    color: #060132;
+}
+
 
 /* Importing Google font - Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
@@ -82,8 +107,15 @@ body {
     margin:0;
 }
 
-.name{
-    width: 35%;
+.fname{
+    width: 30%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.lname{
+    width: 200px;
     padding: 10px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -91,7 +123,7 @@ body {
 }
 
 .age{
-    width: 35%;
+    width: 200px;
     padding: 10px 15px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -99,7 +131,7 @@ body {
 }
 
 .mno{
-    width: 35%;
+    width: 200px;
     padding: 10px 15px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -107,7 +139,7 @@ body {
 }
 
 .email{
-    width: 50%;
+    width: 250px;
     padding: 10px 15px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -120,10 +152,23 @@ input , textarea{
     background-color: #d4d4d4b7;
 }
 
+.password{
+    width: 160px;
+    padding: 7px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
 .submitbtn,.resetbtn{
     border-radius: 6px;
     background-color: #d4d4d4b7;
     padding:5px ;
+    cursor: pointer;
+}
+
+.submitbtn{
+    margin-left: 15px;
 }
 
 .submitbtn:hover {
@@ -131,4 +176,31 @@ input , textarea{
 }
 .resetbtn:hover{
     background-color: #ff7878;
+}
+
+
+.lnamebox{
+    margin-top: -60px;
+    margin-left: 350px;
+}
+
+.dobbox{
+    margin-top: 10px;
+}
+
+.addressbox{
+    margin-top: 15px;
+}
+
+.emailbox{
+    margin-left: 350px;
+    margin-top: -60px;
+}
+.npass{
+    margin-left: 360px;
+    margin-top: -55px;
+}
+
+.details{
+    text-align: center;
 }

@@ -1,4 +1,53 @@
 
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 540px;
+    background-color: rgba(231, 231, 231, 0.753);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 500px;
+    margin-top: -580px;
+    border-radius: 15px;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+
+.payment-description {
+    width: 305px;
+    text-align:justify;
+    border: 1px solid #252424;
+    padding: 20px;
+    border-radius: 15px;
+}
+.Hdes{
+    text-align:center;
+}
+.payment_option{
+    text-align:center;
+}
+
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 350px;
+    background-color: rgba(231, 231, 231, 0.753);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 60px;
+    margin-top: 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+=======
 .container {
     display: flex;
     justify-content: space-between;
@@ -13,6 +62,7 @@
 .payment-description {
     width: 25%;
     text-align: center;
+
 }
 
 .payment-description h2 {
@@ -26,6 +76,17 @@
 }
 
 .payment-form {
+
+    width: 500px;
+    text-align: center;
+    border: 1px solid #252424;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.payment-form h2 {
+    font-size: 30px;
+=======
     width: 45%;
     text-align: center;
     border: 1px solid #252424;
@@ -35,25 +96,36 @@
 
 .payment-form h2 {
     font-size: 27px;
+
     margin-bottom: 20px;
 }
 
 .payment-form h3 {
     text-align: left;
-    font-size: 20px;
+
+    font-size: 25px;
+=======
+    font-size: 20px;n
     margin-bottom: 10px;
 }
 
 .form-group {
     margin-bottom: 15px;
     text-align: left;
+
+=======
     border-radius: 10px;
+
 }
 
 label {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display:block;
+
+    font-size: 22px;
+=======
     font-size: 16px;
+
     margin-bottom: 5px;
 }
 
@@ -94,6 +166,19 @@ button {
 
 .cancel {
     font-size:18px;
+
+    background-color:rgb(173, 59, 59);
+    color:#fff;
+}
+
+.cancel:hover{
+    background-color: #ff0000;
+}
+.pay:hover{
+    background-color: #00bf13;
+}
+
+=======
     background-color:rgb(197, 52, 52);
     color:#fff;
 }
@@ -105,6 +190,28 @@ button {
 }
 
 .total-amount {
+
+    width: 300px;
+    background-color: #f0f0f090;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left:1130px;
+    margin-top: -735px;
+    margin-bottom: 650px;
+    
+}
+
+.total-amount h3{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+.total-amount p {
+    font-size: 17px;
+=======
     width: 20%;
     text-align: center;
     background-color: #f0f0f0;
@@ -120,10 +227,68 @@ button {
 .total-amount p {
     font-size: 20px;
     font-weight: bold;
+
 }
 #card-number,#card-name,#expire-date,#security-code{
     border-radius: 10px;
 }
+
+
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+
+  #expire-date{
+    width:100px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 6px;
+    margin: auto;
+  }
+
+  #security-code{
+    width: 100px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 6px;
+    margin: auto;
+  }
+
+  #card-number{
+    width: 350px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 6px;
+    margin: auto;
+  }
+
+  #card-name{
+    width: 350px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 6px;
+    margin: auto;
+  }
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
+
 #img{
     border-radius:50px;
 }
+

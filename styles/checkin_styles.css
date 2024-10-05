@@ -8,12 +8,57 @@
 fieldset{
     width: 50%;
     border-style:ridge;
+
+    border-color: #30c4ff;
+    border-radius: 15px;
     border-color: #2c2927;
     border-radius: 20px;
+
     padding: 10px;
     font-size: 18px;
     margin:auto;
     background-color: #d9d9d9d7;
+
+    background: url("../images/indexbg.jpg");
+    background-size: cover;
+}
+.book-btn{
+    background-color: #ebeaf1;
+    margin-left: 50px;
+}
+
+
+
+.book-btn , .mng-btn , .check-btn {
+    margin-top: -500px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.book-btn{
+   
+    margin-left: 42px;
+    padding: 10px 45px;
+}
+
+.mng-btn{
+    margin-left: 10px;
+}
+
+.check-btn{
+    margin-left: 10px;
+    padding: 10px 60px;
+    background-color: #0056bf;
 }
 .book-btn{
     background-color: #ebeaf1;
@@ -37,11 +82,16 @@ fieldset{
 
 .check-btn{
     background-color: #85bcff;
+
 }
 
 
 .submitbtn{
+
+    background-color: #007bff;
+=======
     background-color: #85bcff;
+
     color: #fff;
     border-color: #00034fdc;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -49,10 +99,27 @@ fieldset{
     cursor: pointer;
     align-items: center;
     font-size: 25px;
+
+    padding: 5px 15px;
+    position: fixed;
+    right:435px;
+    margin-top: -15px;
+    margin-left: 15PX ;
+
+}
+
+
+.submitbtn:hover {
+    background-color: #0056bf;
+}
+
+
+=======
     padding: 5px;
     position: fixed;
     right:435px;
 }
+
 
 .check{
         width: 45%;
@@ -66,3 +133,15 @@ fieldset{
 .box{
   padding: 10px 50px;
 }
+
+
+@media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
+=======
+

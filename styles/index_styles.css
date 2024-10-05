@@ -9,30 +9,58 @@
 fieldset{
     width: 50%;
     border-style:ridge;
-    border-color: #2c2927;
-    border-radius: 20px;
+    border-color: #00c8ff;
+    border-radius: 15px;
     padding: 10px;
     font-size: 18px;
     margin:auto;
+
+    background-color: #ffffff;
+    margin-bottom: 160px;
+    margin-top: 100px;
+    font-family:'Times New Roman', Times, serif;
+    background: url("../images/indexbg.jpg");
+    background-size: cover;
+=======
     background-color: #d9d9d9d7;
 }
 
 .book-btn{
     background-color: #85bcff;
     margin-left: 50px;
+
 }
 
-.book-btn , .mng-btn , .check-btn{
-    cursor: pointer;
+
+.book-btn , .mng-btn , .check-btn {
+    margin-top: -500px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
     border-radius: 5px;
-    align-items: center;
-    font-size: 18px;
-    padding: 7px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .mng-btn{
     margin-left: 100px;
 }
 
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.book-btn{
+    background-color: #0056bf;
+    margin-left: 42px;
+    padding: 10px 45px;
+}
+
+.mng-btn{
+    margin-left: 10px;
+=======
 .check-btn{
     margin-left: 100px;
 }
@@ -43,11 +71,23 @@ fieldset{
 }
 .mng-btn:hover{
     background-color: #85bcff;
+
+}
+
+.check-btn{
+    margin-left: 10px;
+    padding: 10px 60px;
 }
 
 
+
+
 .submitbtn{
+
+    background-color: #007bff;
+=======
     background-color: #6ab7ff;
+
     color: #fff;
     border-color: #00034fdc;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -55,8 +95,18 @@ fieldset{
     cursor: pointer;
     align-items: center;
     font-size: 25px;
-    padding: 5px;
+    padding: 5px 15px;
+    text-align:center;
+    margin-top: -5px;
+    margin-left:10PX ;
 }
+
+
+.submitbtn:hover {
+    background-color: #0056b3;
+}
+
+=======
 
 
 .submitbtn:hover {
@@ -64,8 +114,9 @@ fieldset{
 }
 
 
+
 .loc1{
-    width: 31%;
+    width: 230px;
     padding: 7px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -74,7 +125,11 @@ fieldset{
 }
 
 .loc2{
+
+    width: 230px;
+=======
     width: 70%;
+
     padding: 7px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -82,8 +137,8 @@ fieldset{
     border-radius: 6px;
 }
 
-.date{
-    width: 31%;
+.classlist{
+    width: 230px;
     padding: 7px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -92,7 +147,11 @@ fieldset{
 }
 
 .pc{
+
+    width: 230px;
+=======
     width: 70%;
+
     padding: 7px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -100,11 +159,95 @@ fieldset{
     border-radius: 6px;
 }
 
+
+.class{
+    margin-left: -360px;
+    margin-top: 20px;
+}
+
+=======
+
 .from{
     margin-left: 50px;
     margin-top: 10px;
   
 }
+
+
+.to{
+    margin-left: 410px;
+    margin-top: -52px;
+    margin-bottom:20px ;
+    
+}
+
+.pscount{
+    margin-left: 2px;
+    margin-top: -50px;
+}
+
+
+.trip{
+    margin-left: 50px;
+}
+
+.subbtn{
+    margin-left: 150px;
+    margin-top: -30px;
+}
+
+
+.trip-type-selection {
+    margin-top: -5px;
+    margin-left:-300px;
+}
+
+.trip-type-selection label {
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.date-selection {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-left: -310px;
+    margin-top: -60px;
+}
+
+.date-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#returnDateContainer {
+    margin-left: 10px;
+}
+
+#departureDate ,#returnDate{
+width: 90%;
+padding: 7px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+font-size: 18px;
+border-radius: 6px;
+}
+
+.dates{
+    margin-left: -360px;
+    margin-top: 35px;
+}
+
+.img{
+    width:12000px;
+    height: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+=======
 
 .to{
     margin-left: 420px;
@@ -129,3 +272,4 @@ fieldset{
     margin-left: 570px;
     margin-top: -30px;
 }
+
