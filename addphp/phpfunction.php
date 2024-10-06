@@ -36,10 +36,13 @@ function loginExists($conn, $user_name, $email)
     $sql = "SELECT * FROM user WHERE user_name = ? OR email = ?;";
     $stmt = mysqli_stmt_init($conn);
 
+    $currentPage = basename($_SERVER['PHP_SELF']);
+
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location:signup.php?error=stmtfailed");
+        header("Location:../.$currentPage.?error=stmtfailed");
         exit();
     }
+
     mysqli_stmt_bind_param($stmt, "ss", $user_name, $email);
     mysqli_stmt_execute($stmt);
 
@@ -56,24 +59,25 @@ function loginExists($conn, $user_name, $email)
 
 function create_user($conn, $first_name, $last_name, $email, $user_name, $password, $roleid = 'role00')
 {
+    $user_status = 	'active';
 
-    $sql = "INSERT INTO user (first_name, last_name, email, user_address, phone, user_name, user_password, role_id) VALUES(?,?,?,?,?,?,?,?);";
+    $sql = "INSERT INTO user (first_name, last_name, email, user_address, phone, user_name, user_password, role_id, user_status) VALUES(?,?,?,?,?,?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
 
     $user_address = null;
     $phone = null;
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location:signup.php?error=stmtfailed");
+        header("Location:../signup.php?error=stmtfailed");
         exit();
     }
-    mysqli_stmt_bind_param($stmt, "ssssssss", $first_name, $last_name, $email, $user_address, $phone, $user_name, $password, $roleid);
+    mysqli_stmt_bind_param($stmt, "sssssssss", $first_name, $last_name, $email, $user_address, $phone, $user_name, $password, $roleid, $user_status);
     if (mysqli_stmt_execute($stmt)) {
         // If the query was successful, redirect to the success page
-        header("Location:signin.php?success=accountcreated");
+        header("Location:../signin.php?success=accountcreated");
     } else {
         // If the query failed, redirect with an error message
-        header("Location:signup.php?error=executionfailed");
+        header("Location:../signup.php?error=executionfailed");
     }
     mysqli_stmt_close($stmt);
 }
@@ -84,7 +88,7 @@ function user_login($conn, $user_name, $password)
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location:signin.php?error=stmtfailed");
+        header("Location:../signin.php?error=stmtfailed");
         exit();
     }
     mysqli_stmt_bind_param($stmt, "ss", $user_name, $user_name);
@@ -97,7 +101,7 @@ function user_login($conn, $user_name, $password)
 
     if($row == false)
     {
-        header("Location:signin.php?error=usernamenotexists");
+        header("Location:../signin.php?error=usernamenotexists");
         exit();
     }
     
@@ -105,7 +109,12 @@ function user_login($conn, $user_name, $password)
     
     if($userPassword !== $password)
     {
-        header("Location:signin.php?error=passwordnotmatch");
+        header("Location:../signin.php?error=passwordnotmatch");
+        exit();
+    }
+    elseif($row["user_status"] == 'suspend' )
+    {
+        header("Location:../access_denied.php?error=accountsuspended");
         exit();
     }
     else
@@ -114,26 +123,28 @@ function user_login($conn, $user_name, $password)
         $_SESSION["user_id"] = $row["user_id"];
         $_SESSION["first_name"] = $row["first_name"];
         $_SESSION["last_name"] = $row["last_name"];
+        $_SESSION["dob"] = $row["dob"];
         $_SESSION["email"] = $row["email"];
         $_SESSION["phone"] = $row["phone"];
         $_SESSION["user_address"] = $row["user_address"];
         $_SESSION["user_name"] = $row["user_name"];
         $_SESSION["role_id"] = $row["role_id"];
+        $_SESSION["user_status"] = $row["user_status"];
 
-        header("Location:index.php?success=loginsuccess");
+
     }
 
     if($row["role_id"] == 'role00')
     {
-        header("Location:index.php?success=loginsuccess");
+        header("Location:../index.php?success=loginsuccess");
     }
-    elseif($row["role_id"] == 'role01' || $row["role_id"] == 'role02' || $row["role_id"] == 'role03' || $row["role_id"] == 'role004' )
+    elseif($row["role_id"] == 'role01' || $row["role_id"] == 'role02' || $row["role_id"] == 'role03' || $row["role_id"] == 'role04' )
     {
-        header("Location:dashboard/dashboard.php?success=loginsuccess");
+        header("Location:../system/dashboard.php?success=loginsuccess");
     }
     else
     {
-        header("Location:login.php?error=invalid_role");
+        header("Location:../signin.php.php?error=invalid_role");
         exit();
     }
 
@@ -168,6 +179,10 @@ function error_masseges($getpart)
                     {
                         return 'wrong password';
                     }
-
+                    if($getpart =="emailexists")
+                    {
+                        return 'This Email already exists';
+                    }
+                   
                 }
 }

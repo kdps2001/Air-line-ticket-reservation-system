@@ -4,27 +4,25 @@
         $first_name = $_POST["firstname"];
         $last_name = $_POST["lastname"];
         $email = $_POST["email"];
-        $phone = $_POST["phone"];
-        $address = $_POST["address"];
         $user_name = $_POST["username"];
         $password = $_POST["password"];
         
 
-        require_once 'config/db_config.php';
-        require_once 'function_php/functions_form.php';
+        require_once '../config/db_config.php';
+        require_once 'phpfunction.php';
 
         $invalidUserName = invalidUserName($user_name);
         $loginExists = loginExists($conn, $user_name, $email);
 
         if($invalidUserName !== false)
         {
-            header("location: signup.php?error=invalidUserName");
+            header("location: ../signup.php?error=invalidUserName");
             exit();
         }
 
         if($loginExists !== false)
         {
-            header("location: signup.php?error=loginExists");
+            header("location: ../signup.php?error=loginExists");
             exit();
         }
 
@@ -34,5 +32,5 @@
 
     else
     {
-        header('location: signup.php');
+        header('location: ../signup.php');
     }

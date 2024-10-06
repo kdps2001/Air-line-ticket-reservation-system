@@ -1,74 +1,116 @@
 <?php
- $additionalCSS = ["styles/index_styles.css"];
-include 'header.php';
+$additionalCSS = ["styles/search_flight_styles.css"];
+include 'addphp/header.php';
+require_once 'config/db_config.php';
+
+$sql_airport = "SELECT * FROM airport";
+$sql_class = "SELECT * FROM class"; 
+
 ?>
-<<<<<<< HEAD
-    <h3><marquee direction="right">Welcome To SKY WAVE AIRLINES</marquee></h3>
-    <br><br>
-=======
->>>>>>> b202eef42b0538fbdcbf9f695e2b473466b94a24
-    <form>
+
+<form action="search_results.php" method="GET">
          <fieldset>
             <br>
                 <div> 
                 <button class="book-btn" href="#">BOOK A TRIP</button>
-                <button class="mng-btn" href="#">MANAGE BOOKING</button>
-                <a href="checkin.php">
-                <button type ="button" class="check-btn" onclick="window.location.href='checkin.php'">CHECK IN</button></a>
+                <button type ="button" class="check-btn" onclick="window.location.href='checkin.php'">CHECK IN</button>
                  </div><br> 
         
                     <div class="from">
                     From :
-                    <select name="from" class="loc1">
-                        <option> Choose Option <Option> 
-                        <option>SriLanka</option>
-                        <option>Australia</option>
-                        <option>India</option>
-                        <option>China</option>
-                        <option>Japan</option>
-                        <option>Malaysia</option>
+                    <select name="from" class="loc1" required>
+                        <option disabled selected value = ''> Choose Option </Option> 
+                        <?php
+
+                        $result = $conn->query($sql_airport);
+
+                        if ($result->num_rows > 0) 
+                        {
+                            while ($row = $result->fetch_assoc()) 
+                            {
+                                echo '<option value="'. $row['airport_id']. '">' . $row['airport_id'].' - '. $row['airport_name']. ' - ' . $row['country'].'</option>';
+                            }
+                        } 
+                        else 
+                        {
+                            echo '<option disabled>No airports available</option>';
+                        }
+                        ?>
                     </select>
                     </div>
                 
         
                     <div class="to">
                         TO :
-                    <select name="to" class="loc2">
-                        <option>Choose Option &emsp; <option> 
-                         <option>SriLanka</option>
-                        <option>Australia</option>
-                        <option>India</option>
-                        <option>China</option>
-                        <option>Japan</option>
-                        <option>Malaysia</option>
+                    <select name="to" class="loc2" required>
+                        <option disabled selected value = ''>Choose Option </option> 
+                        <?php
+
+                        $result = $conn->query($sql_airport);
+
+                        if ($result->num_rows > 0) 
+                        {
+                            while ($row = $result->fetch_assoc()) 
+                            {
+                                echo '<option value="'. $row['airport_id']. '">' . $row['airport_id'].' - '. $row['airport_name']. ' - ' . $row['country'].'</option>';
+                            }
+                        } 
+                        else 
+                        {
+                            echo '<option disabled>No airports available</option>';
+                        }
+                        ?>
                     </select>
-                    </div>
-                    <div class = "dates">
-                    <label for="date">Date &nbsp;:</label>
-                    <input type="date" class="date" id="date" name="date">
-                    </div>
+
+                    
+                    <div class="class">
+                   Class :
+                    <select name="class" class="classlist" required>
+                        <option disabled selected value = ''>Select Class</Option> 
+                        <?php
+
+                        $result = $conn->query($sql_class);
+
+                        if ($result->num_rows > 0) 
+                        {
+                            while ($row = $result->fetch_assoc()) 
+                            {
+                                echo '<option value="'. $row['class_id']. '">' . $row['class_type'] .'</option>';
+                            }
+                        } 
+                        else 
+                        {
+                            echo '<option disabled>No class available</option>';
+                        }
+                        ?>
+                        
+                    </select> 
+                </div>
 
                     <div class="pscount">
                    PC :
-                    <select name="to" id="to" class="pc">
-                        <option>Passenger Count &nbsp;<Option> 
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select> 
-                </div><br>
-                    <div class="trip">
-                    <input type = "radio" value="rt" name="trip" >One Way &emsp;
-                    <input type = "radio" value="ow" name="trip">Round Trip
+                    <input class="passenger_count" type="text" id="passenger_count" name="passenger_count" required>
+                </div>
+              
+                    <div class = "dates">
+                    <label for="date">Date :</label>
                     </div>
+
+                    <div class="date-selection">
+                        <div class="date-item">
+                            <label for="date"></label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                           
+                    </div><br>
+
                     <div class="subbtn">
-                    <input type="button"  class="submitbtn" onclick="window.location.href='search_results.php'" value ="&nbsp; Search &nbsp;" > 
+                    <input type="submit" name="submit" class="submitbtn" value ="Search" > 
                     </div>
         
         </fieldset> <br><br><br>
     </form>
+    
 <?php
-include 'footer.php';
+include 'addphp/footer.php';
 ?>

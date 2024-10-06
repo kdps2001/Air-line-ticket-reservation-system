@@ -1,13 +1,19 @@
 <?php
-$additionalCSS = ["styles/profile_styles.css"];
+    session_start();
+    require_once 'dash_functions.php';
+    require_once '../config/db_config.php';
+    $module_ids = user_access_check($conn,$_SESSION["role_id"],);
+?>
+<?php
+$additionalCSS = ["../styles/profile_styles.css"];
 
-include 'addphp/header.php';
-require_once 'addphp/phpfunction.php';
+include 'dash_header.php';
+require_once '../addphp/phpfunction.php';
 
 
 if(!isset($_SESSION["user_id"]))
     {
-        header('Location: index.php');
+        header('Location: ../index.php');
         exit();
     } 
 ?>
@@ -20,7 +26,7 @@ if(!isset($_SESSION["user_id"]))
     </div>
     
 
-    <form action="addphp/update_profile.php" method="POST" class="edit-profile">
+    <form action="dashprofile_update.php" method="POST" class="edit-profile">
         <fieldset>
             <legend>Edit Profile</legend>
             <div class="form-group">
@@ -61,6 +67,5 @@ if(!isset($_SESSION["user_id"]))
     </form>
 </div>
 
-<?php
-include 'addphp/footer.php';
-?>
+</body>
+</html>

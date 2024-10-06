@@ -1,4 +1,3 @@
-
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-section about">
@@ -18,9 +17,9 @@
         
         <div class="footer-section contact-info">
             <h2>Contact Us</h2>
-            <p><i class="fas fa-phone"></i> +94 123 456 789</p>
-            <p><i class="fas fa-envelope"></i> support@skywave.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</p>
+            <p><i class="fas"></i> +94 123 456 789</p>
+            <p><i class="fas"></i> support@skywave.com</p>
+            <p><i class="fas"></i> Colombo, Sri Lanka</p>
         </div>
     </div>
     

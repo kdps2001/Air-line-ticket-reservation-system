@@ -1,134 +1,116 @@
-*{  
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* General Container Styling */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
 }
 
-fieldset{
-    background-color: #d9d9d93b;
-    width: 650px;
-    border-color: +000000;
-    border-radius: 10px;
-    padding: 25px;
-    font-size: 20px;
-
-}
-
-
-.container {
-    display: flex;
-    gap: 30px;
-    padding: 20px;
-    background-color: #dddddd73;
-    border-radius: 8px;
-    width : 1100px;
-    border-color: #000000;
-    border-style: double;
-    margin: auto;
-}
-
-
-/* Left Profile Section */
-.profile {
-    width: 300px;
-    background-color: #eeeeee31;
-    padding: 15px;
-    border-color: #000000;
-    border-radius: 10px;
-    border-style:ridge;
-}
-
+/* Profile Header Styling */
 .profile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #272727;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
 }
 
+/* Profile Picture */
 .profile-picture {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .profile-picture img {
-    border-radius: 80%;
-    width: 200px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 3px solid #ddd;
 }
 
-.profile-details {
-    text-align: left;
-    font-size: 20px;
+/* Form Styling */
+form.edit-profile {
+    width: 100%;
 }
 
-.details{
-    text-align: center;
+fieldset {
+    border: 2px solid #272727;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-.profile-details h3 {
+legend {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0 10px;
+    color: #272727;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
     margin-bottom: 10px;
+    color: #333;
 }
 
-.profile-details p {
-    margin-bottom: 8px;
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-
-/* Importing Google font - Open Sans */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
-
-body {
-    margin:0;
+.form-group textarea {
+    resize: none;
 }
 
-.name{
-    width: 35%;
-    padding: 10px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    font-size: 18px;
+/* Action Buttons Styling */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
 }
 
-.age{
-    width: 35%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    font-size: 18px;
+.form-actions .btn {
+    width: 150px;
+    padding: 10px;
+    font-weight: 500;
+    background-color: #272727;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 15px;
 }
 
-.mno{
-    width: 35%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    font-size: 18px;
+.form-actions .btn:hover {
+    background-color: #444;
 }
 
-.email{
-    width: 50%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    font-size: 18px;
+/* Reset and Submit Button Styles */
+.resetbtn {
+    background-color: #ff8181;
 }
 
-input , textarea{
-    border-radius: 6px;
-    font-size: 18px;
-    background-color: #d4d4d4b7;
+.resetbtn:hover {
+    background-color: #ff4d4d;
 }
 
-.submitbtn,.resetbtn{
-    border-radius: 6px;
-    background-color: #d4d4d4b7;
-    padding:5px ;
-}
-
-.submitbtn:hover {
-    background-color: #76ff98;
-}
-.resetbtn:hover{
-    background-color: #ff7878;
+.error_msg {
+    color: red;
+    text-align: center;
 }

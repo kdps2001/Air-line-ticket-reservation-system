@@ -1,0 +1,160 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif; /* Modern font */
+    background-color: #f4f4f4; /* Light background for contrast */
+    margin: 0;
+    padding: 20px; /* Adding padding to the body */
+}
+
+/* Container for the form */
+.container {
+    width: 80%; /* Wider form */
+    max-width: 800px; /* Limits the maximum width */
+    margin: 0 auto;
+    padding: 20px; /* Increased padding for better spacing */
+    border: 1px solid #ddd; /* Softer border */
+    border-radius: 10px;
+    background-color: #fff; /* White background for the form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Menubox select styling */
+.menubox {
+    margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+.menulist {
+    width: 100%;
+    padding: 10px; /* Slightly increased padding */
+    font-size: 16px; /* Slightly larger font */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light grey background for select */
+}
+
+/* User input field */
+.user {
+    width: 100%;
+    padding: 10px; /* Increased padding */
+    margin-bottom: 15px; /* Increased margin */
+    font-size: 16px; /* Slightly larger font */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+.user:focus {
+    border-color: #4CAF50; /* Change border color on focus */
+}
+
+/* Search button */
+.search-btn {
+    width: 100%;
+    padding: 10px; /* Increased padding */
+    font-size: 16px; /* Slightly larger font */
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.search-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Fieldset styling */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px; /* Increased padding */
+    margin-top: 20px; /* Increased margin */
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Light grey background for fieldset */
+}
+
+.details h2 {
+    margin: 8px 0; /* Increased margin for better spacing */
+    font-size: 18px; /* Slightly larger text */
+    color: #333; /* Darker text color for contrast */
+}
+
+/* Buttons for delete and suspend */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px; /* Increased margin */
+}
+
+.delete-btn,
+.suspend-btn,
+.reactivate-btn {
+    width: 48%; /* Maintain consistent button width */
+    padding: 10px; /* Increased padding */
+    font-size: 16px; /* Slightly larger font */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.delete-btn {
+    background-color: #f44336; /* Red for delete */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #e53935; /* Darker red on hover */
+}
+
+.suspend-btn {
+    background-color: #ff9800; /* Orange for suspend */
+    color: white;
+}
+
+.suspend-btn:hover {
+    background-color: #fb8c00; /* Darker orange on hover */
+}
+
+.reactivate-btn {
+    background-color: #2196F3; /* Blue for reactivate */
+    color: white;
+}
+
+.reactivate-btn:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}
+
+/* Add margin to the buttons to create space between them */
+.delete-btn {
+    margin-right: 10px; /* Space between delete and suspend buttons */
+}
+
+.error {
+    color: #e53935; /* Error message color */
+    text-align: center;
+    font-weight: bold; /* Bold error messages */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons on small screens */
+    }
+
+    .delete-btn,
+    .suspend-btn,
+    .reactivate-btn {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 10px; /* Margin between buttons */
+    }
+
+    /* Remove margin-right for mobile to avoid excess space */
+    .delete-btn {
+        margin-right: 0; /* Reset margin on mobile */
+    }
+}

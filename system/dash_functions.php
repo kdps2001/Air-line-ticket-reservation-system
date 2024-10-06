@@ -21,19 +21,17 @@ function user_access_check($conn,$role)
     }
 
     $sql = "SELECT module_id FROM rolemodule WHERE role_id ='$role';";
-    $result = $conn->query($sql);
+        $result = $conn->query($sql);
 
-    $module_ids = array(); //empty array
-    $row = mysqli_fetch_assoc($result);
+        $module_ids = array(); // empty array
 
-    if($row = mysqli_fetch_assoc($result))
-    {
-        while ($row = mysqli_fetch_assoc($result)) 
+        if ($result->num_rows > 0) 
         {
-            $module_ids[] = $row['module_id']; // append
+            while ($row = mysqli_fetch_assoc($result)) 
+            {
+                $module_ids[] = $row['module_id']; // append each module_id
+            }
         }
         return $module_ids;
-    }
-    
-    return $module_ids;
+
 }

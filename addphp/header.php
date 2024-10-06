@@ -24,6 +24,7 @@
         <div class="nav-logo">
             <p>SkyWave Airlines</p>
         </div>
+    
         <div class="nav-menu" id="navMenu">
             <ul>
                 <?php
@@ -40,9 +41,21 @@
             if(isset($_SESSION["user_id"]))
             {
                 echo '<div class="user-info">';
-                echo "<p>Welcome " . $_SESSION["user_name"] . "</p>";
-                echo '<button class="btn profile" onclick="window.location.href=\'profile.php\'">Profile</button>';
-                echo '<button class="btn logout" onclick="window.location.href=\'logout.php\'">Logout</button>';
+                echo "<div><p>Welcome " . $_SESSION["user_name"] . "</p></div>";
+
+               
+                $currentPage = basename($_SERVER['PHP_SELF']);
+
+                if($currentPage == 'profile.php')
+                {
+                    echo '<button class="btn profile" onclick="window.location.href= \'index.php\'">Back</button>';
+                }
+                else
+                {
+                    echo '<button class="btn profile" onclick="window.location.href=\'profile.php\'">Profile</button>';
+                }
+            
+                echo '<button class="btn logout" onclick="window.location.href=\'addphp/logout.php\'">Logout</button>';
                 echo '</div>';
             }
             else

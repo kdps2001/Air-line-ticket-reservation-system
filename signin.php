@@ -1,13 +1,13 @@
 <?php
     $additionalCSS = ["styles/signin_up_style.css"];
-    include 'header.php';
-    require_once 'function_php/functions_form.php';
+    include 'addphp/header.php';
+    require_once 'addphp/phpfunction.php';
 
 ?>
     <div class="form-container">
         <div class="form-box">
             <h2>Sign In</h2>
-            <form action="login.php" method="POST">
+            <form action="addphp/login.php" method="POST">
                 
                 <div class="input-group">
                     <label for="email">Email / User Name</label>
@@ -31,5 +31,5 @@
         </div>
     </div>
 <?php
-    include 'footer.php';
+    include 'addphp/footer.php';
 ?>

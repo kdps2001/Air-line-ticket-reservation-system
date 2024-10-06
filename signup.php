@@ -1,14 +1,14 @@
 <?php
 $additionalCSS = ["styles/signin_up_style.css"];
-include 'header.php';
-require_once 'function_php/functions_form.php';
+include 'addphp/header.php';
+require_once 'addphp/phpfunction.php';
 ?>
 
     <div class="form-container">
         <div class="form-box">
             <h2>Create Account</h2>
 
-            <form action="register.php" method="POST" onsubmit="return validateForm()">
+            <form action="addphp/register.php" method="POST" onsubmit="return validateForm()">
                 <div class="input-group">
                     <label for="firstname">First Name</label>
                     <input type="text" id="firstname" name="firstname" required>
@@ -69,5 +69,5 @@ require_once 'function_php/functions_form.php';
     </script>
 
 <?php
-include 'footer.php';
+include 'addphp/footer.php';
 ?>

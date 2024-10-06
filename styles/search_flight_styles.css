@@ -1,0 +1,191 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+fieldset{
+    background-color: #d9d9d93b;
+    width: 70%; /* Responsive width */
+    max-width: 900px; /* Set a maximum width */
+    border-color: #30c4ff;
+    border-radius: 15px;
+    padding: 0px;
+    font-size: 18px;
+    margin: 50px auto; /* Center the fieldset */
+    background: url("../images/index_search_bg.jpg");
+    background-size: cover;
+    position: relative; /* Keep the items within the fieldset */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.book-btn, .check-btn,.submitbtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 110px;
+    margin-top: 30px;
+}
+
+.book-btn:hover, .check-btn:hover {
+    background-color: #0056b3;
+}
+
+.book-btn{
+    margin-left: 100px;
+    padding: 10px 40px;
+}
+.check-btn{
+    margin-left: 145px;
+    padding: 10px 10px;
+    width: 28%;
+}
+
+.submitbtn {
+    width: auto;
+    display: block;
+    margin: 20px auto; /* Center the submit button */
+    margin-right: 100px;
+    margin-top: -30px;
+    font-size: 25px;
+    padding: 5px 15px;
+
+}
+.submitbtn:hover {
+    background-color: #0056b3;
+}
+
+.loc1, .loc2, .classlist, .passenger_count {
+    width: 230px;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.class, .from, .to, .pscount,.dates {
+    margin-left: 20px;
+}
+
+.class{
+    margin-left: -360px;
+    margin-top: 20px;
+}
+
+.from{
+    margin-left: 50px;
+    margin-top: 10px;
+  
+}
+
+.to{
+    margin-left: 410px;
+    margin-top: -52px;
+    margin-bottom:20px ;
+    
+}
+
+.pscount{
+    margin-left: 2px;
+    margin-top: -50px;
+}
+
+
+
+
+.dates{
+    margin-left: -360px;
+    margin-top: 40px;
+}
+
+
+
+.date-selection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: -310px;
+    margin-top: -60px;
+}
+
+.date-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#date {
+    width: 90%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+/* Responsive Styling for Larger Screens */
+@media (min-width: 1280px) {
+    fieldset {
+        width: 80%;
+    }
+
+    .loc1, .loc2, .classlist, .passenger_count {
+        width: 250px;
+        font-size: 20px;
+    }
+
+    .book-btn, .check-btn {
+        font-size: 22px;
+        padding: 12px 50px;
+    }
+
+    .submitbtn {
+        font-size: 28px;
+    }
+}
+
+
+/* Responsive Styling for Mobile */
+@media (max-width: 600px) {
+    fieldset {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .loc1, .loc2, .classlist, .passenger_count {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .from, .to, .pscount, .class, .dates {
+        margin-left: 0;
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    .date-selection {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .book-btn, .check-btn {
+        width: 100%;
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+   
+    .submitbtn {
+        width: 100%;
+        margin-left: 0;
+        font-size: 18px;
+    }
+}
