@@ -1,0 +1,54 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /* Light background */
+    color: #333; /* Dark text for readability */
+    margin: 0;
+    padding: 20px;
+}
+
+.faq-container {
+    max-width: 800px; /* Maximum width of the FAQ container */
+    margin: 0 auto; /* Center align */
+    padding: 20px;
+    background-color: white; /* White background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+    text-align: center; /* Center align the main heading */
+    color: #007bff; /* Primary color for headings */
+}
+
+.faq-item {
+    margin-bottom: 20px; /* Space between FAQ items */
+}
+
+.faq-question {
+    font-size: 20px; /* Size for questions */
+    margin: 0; /* No margin for question heading */
+}
+
+.faq-answer {
+    font-size: 16px; /* Size for answers */
+    margin-top: 5px; /* Space above answer */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller heading size */
+    }
+
+    .faq-question {
+        font-size: 18px; /* Smaller question size */
+    }
+
+    .faq-answer {
+        font-size: 14px; /* Smaller answer size */
+    }
+}
