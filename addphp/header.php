@@ -33,7 +33,7 @@
 
                 <li><a href="index.php" class="<?php echo ($currentPage == 'index.php') ? 'active' : ''; ?>">Home</a></li>
                 <li><a href="about.php" class="<?php echo ($currentPage == 'about.php') ? 'active' : ''; ?>">About us</a></li>
-                <li><a href="#" class="<?php echo ($currentPage == 'contact.php') ? 'active' : ''; ?>">Contact us</a></li>
+                <li><a href="contact.php" class="<?php echo ($currentPage == 'contact.php') ? 'active' : ''; ?>">Contact us</a></li>
 
             </ul>
         </div>

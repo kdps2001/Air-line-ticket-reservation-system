@@ -58,64 +58,68 @@ $sql_flight = "
 </div>
 <br>
 
-<form action="payment.php"method="post">
-    
-    <div class="selectflight">
-        <h1 class="selectheader">SELECT FLIGHT</h1>
-        <br><br>
-        <table>
-            <tr >
-                <th>Fight No</th>
-                <th>Airline</th>
-                <th>Departure Time</th>
-                <th>Arrival Time</th>
-                <th>1 ticket Price</th>
-                <th>total price</th>
-                <th>Select</th>
-            </tr>
-            <?php 
-                $sql_flight = "SELECT flight_no, flight_name, departure, dip_date, dip_time, arrival, arr_date, arr_time, airline_id FROM flight 
-                WHERE departure = '$from' 
-                AND arrival = '$to' 
-                AND dip_date = '$departureDate'";
+<table>
+    <tr>
+        <th>Flight No</th>
+        <th>Airline</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>1 Ticket Price</th>
+        <th>Total Price</th>
+        <th>Select</th>
+    </tr>
+    <?php 
+        $sql_flight = "SELECT flight_no, flight_name, dip_time, arr_time FROM flight 
+        WHERE departure = '$from' 
+        AND arrival = '$to' 
+        AND dip_date = '$departureDate'";
+        
+        $flight_result = $conn->query($sql_flight);
+        
+        if ($flight_result->num_rows > 0) {
+            echo "<tr><td colspan='7'><h2>Available Flights:</td></h2><tr>";
             
-            $flight_result = $conn->query($sql_flight);
-            
-            if ($flight_result->num_rows > 0) 
-            {
-                echo "<tr><td colspan='7'><h2>Available Flights:</td></h2><tr>";
+            while ($f_row = $flight_result->fetch_assoc()) {
+                $flight_no = $f_row['flight_no'];
+                
+                // Query to get the price for the selected class
+                $sql_flight_price = "SELECT fee FROM flight_class WHERE flight_no = '$flight_no' AND class_id = '$class' ";
+                $price_result = $conn->query($sql_flight_price);
+                $p_row = $price_result->fetch_assoc();
 
-                while ($f_row = $flight_result->fetch_assoc())
-                 {
-                    $flight_no = $f_row['flight_no'];
-
-                    $sql_flight_price = "SELECT fee FROM flight_class WHERE flight_no = '$flight_no' AND class_id = '$class' ";
-
-                    $price_result = $conn->query($sql_flight_price);
-                    $p_row = $price_result->fetch_assoc();
-
-                    echo "<tr><td>". $f_row['flight_no'] . "</td>";
-                    echo "<td>". $f_row['flight_name'] ."</td>";
-                    echo "<td>". $f_row['dip_time'] ."</td>";
-                    echo "<td>". $f_row['arr_time'] ."</td>";
-                    echo "<td>". "$ " . $p_row['fee'] ."</td>";
-                    echo "<td>". "$ " . ($p_row['fee'] * $passenger)."</td>";
-                    echo '<td class="submit"><button type="submit" name="submit" class="continue-button" value ="'.$f_row['flight_no'].'">CONTINUE</button></td>';
-                    //echo '<td class="btn"><input type="radio" class="selectbtn" value ="'.$f_row['flight_no'].'" name="select"> </td>';
-                    echo "</tr>";
-                 }
-            } 
-
-            else 
-            {
-                echo "<tr><td colspan='7' ><h2>No flights available for the selected route and date</h2></td><tr>";   
+                // Calculate total price for the number of passengers
+                $total_price = $p_row['fee'] * $passenger;
+                
+                echo "<tr>";
+                echo "<td>" . $f_row['flight_no'] . "</td>";
+                echo "<td>" . $f_row['flight_name'] . "</td>";
+                echo "<td>" . $f_row['dip_time'] . "</td>";
+                echo "<td>" . $f_row['arr_time'] . "</td>";
+                echo "<td>$ " . $p_row['fee'] . "</td>";
+                echo "<td>$ " . $total_price . "</td>";
+                
+                // Create a form for each flight row
+                echo '<td>';
+                echo '<form action="payment.php" method="post">';
+                
+                // Hidden inputs to send price and flight number only for the selected row
+                echo "<input type='hidden' name='price' value='" . $total_price . "'>";
+                echo "<input type='hidden' name='flight_no' value='" . $f_row['flight_no'] . "'>";
+                echo "<input type='hidden' name='class' value='" . $classrow['class_id'] . "'>";
+                
+                // Submit button to select the flight
+                echo '<button type="submit" name="submit" class="continue-button">CONTINUE</button>';
+                
+                echo '</form>';
+                echo '</td>';
+                echo "</tr>";
             }
-            
-            ?>
-        </table>
-    </div>
+        } else {
+            echo "<tr><td colspan='7'><h2>No flights available for the selected route and date</h2></td><tr>";   
+        }
+    ?>
+</table>
 
-</form>
 
 <?php
 include 'addphp/footer.php';

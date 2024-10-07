@@ -186,3 +186,34 @@ function error_masseges($getpart)
                    
                 }
 }
+
+function get_free_seat($conn, $class, $flight_no, $option) {
+    $seat_query = "SELECT seat_no FROM seat WHERE class_id = '$class'";
+    $seat_result = $conn->query($seat_query);
+
+    if ($seat_result->num_rows > 0) 
+    {
+        $available_seats = [];  
+
+        while ($seat_row = $seat_result->fetch_assoc()) {
+            $seat_no = $seat_row['seat_no'];
+
+            $booking_query = "SELECT seat_no FROM booking WHERE flight_no = '$flight_no' AND seat_no = '$seat_no'";
+            $booking_result = $conn->query($booking_query);
+
+            if ($booking_result->num_rows == 0) {
+        
+                $available_seats[] = $seat_no;
+
+                if ($option == 0) {
+                    return $seat_no;
+                }
+            }
+        }
+        if ($option == 1) {
+            return count($available_seats);
+        }
+    }
+    return null;
+}
+
