@@ -89,7 +89,7 @@ $sql_class = "SELECT * FROM class";
 
                     <div class="pscount">
                    PC :
-                    <input class="passenger_count" type="text" id="passenger_count" name="passenger_count" required>
+                    <input class="passenger_count" type="text" id="passenger_count" name="passenger_count" value="1" required>
                 </div>
               
                     <div class = "dates">

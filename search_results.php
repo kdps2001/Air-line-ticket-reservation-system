@@ -59,89 +59,7 @@ $sql_flight = "
 <br>
 
 <form action="payment.php"method="post">
-    <div class="selectseat" id="seat" required>
-        <h2 class="selectS">SELECT SEATS</h2><br><br>
-        <div class="Wseat">
-        <label><input type="checkbox" />W1</label>
-        <label><input type="checkbox" />W2</label>
-        <label><input type="checkbox" />W3</label>
-        <label><input type="checkbox" />W4</label>
-        <label><input type="checkbox" />W5</label>
-        <label><input type="checkbox" />W6</label>
-        <label><input type="checkbox" />W7</label>
-        <label><input type="checkbox" />W8</label>
-        <label><input type="checkbox" />W9</label>
-        <label><input type="checkbox" />W10</label>
-        </div>
-
-        <div class="Mseat">
-        <label><input type="checkbox" />M1</label>
-        <label><input type="checkbox" />M2</label>
-        <label><input type="checkbox" />M3</label>
-        <label><input type="checkbox" />M4</label>
-        <label><input type="checkbox" />M5</label>
-        <label><input type="checkbox" />M6</label>
-        <label><input type="checkbox" />M7</label>
-        <label><input type="checkbox" />M8</label>
-        <label><input type="checkbox" />M9</label>
-        <label><input type="checkbox" />M10</label>
-        </div>
-
-        <div class="Aseat">
-        <label><input type="checkbox" />A1</label>
-        <label><input type="checkbox" />A2</label>
-        <label><input type="checkbox" />A3</label>
-        <label><input type="checkbox" />A4</label>
-        <label><input type="checkbox" />A5</label>
-        <label><input type="checkbox" />A6</label>
-        <label><input type="checkbox" />A7</label>
-        <label><input type="checkbox" />A8</label>
-        <label><input type="checkbox" />A9</label>
-        <label><input type="checkbox" />A10</label>
-        </div>
-
-        <div class="Rseat">
-        <label><input type="checkbox" />A11</label>
-        <label><input type="checkbox" />A12</label>
-        <label><input type="checkbox" />A13</label>
-        <label><input type="checkbox" />A14</label>
-        <label><input type="checkbox" />A15</label>
-        <label><input type="checkbox" />A16</label>
-        <label><input type="checkbox" />A17</label>
-        <label><input type="checkbox" />A18</label>
-        <label><input type="checkbox" />A19</label>
-        <label><input type="checkbox" />A20</label>
-        </div>
-
-        <div class="RMseat">
-        <label><input type="checkbox" />M11</label>
-        <label><input type="checkbox" />M12</label>
-        <label><input type="checkbox" />M13</label>
-        <label><input type="checkbox" />M14</label>
-        <label><input type="checkbox" />M15</label>
-        <label><input type="checkbox" />M16</label>
-        <label><input type="checkbox" />M17</label>
-        <label><input type="checkbox" />M18</label>
-        <label><input type="checkbox" />M19</label>
-        <label><input type="checkbox" />M20</label>
-        </div>
-
-        <div class="RWseat">
-        <label><input type="checkbox" />W11</label>
-        <label><input type="checkbox" />W12</label>
-        <label><input type="checkbox" />W13</label>
-        <label><input type="checkbox" />W14</label>
-        <label><input type="checkbox" />W15</label>
-        <label><input type="checkbox" />W16</label>
-        <label><input type="checkbox" />W17</label>
-        <label><input type="checkbox" />W18</label>
-        <label><input type="checkbox" />W19</label>
-        <label><input type="checkbox" />W20</label>
-        </div>
-
-
-
-    </div>
+    
     <div class="selectflight">
         <h1 class="selectheader">SELECT FLIGHT</h1>
         <br><br>
@@ -182,7 +100,8 @@ $sql_flight = "
                     echo "<td>". $f_row['arr_time'] ."</td>";
                     echo "<td>". "$ " . $p_row['fee'] ."</td>";
                     echo "<td>". "$ " . ($p_row['fee'] * $passenger)."</td>";
-                    echo '<td class="btn"><input type="radio" class="selectbtn" value ="'.$f_row['flight_no'].'" name="select"> </td>';
+                    echo '<td class="submit"><button type="submit" name="submit" class="continue-button" value ="'.$f_row['flight_no'].'">CONTINUE</button></td>';
+                    //echo '<td class="btn"><input type="radio" class="selectbtn" value ="'.$f_row['flight_no'].'" name="select"> </td>';
                     echo "</tr>";
                  }
             } 
@@ -194,8 +113,6 @@ $sql_flight = "
             
             ?>
         </table>
-
-        <button type="submit" class="continue-button">CONTINUE</button>
     </div>
 
 </form>

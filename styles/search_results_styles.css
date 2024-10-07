@@ -1,128 +1,84 @@
-body{
-    font-family:'Poppins', sans-serif;
-   color: white;
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
-.search{
+.search {
     text-align: center;
     color: rgb(16, 0, 70);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
 }
 
-.searchbox{
+.searchbox {
     width: 40%;
     height: 350px;
-    padding:10px;
+    padding: 10px;
     border-radius: 15px;
-    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.18);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
-    margin-left: 100px;
-    margin-top: 40px;
-
-    
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin: 40px auto; /* Centering box */
 }
 
-
-h1{
+h1 {
     font-size: 35px;
-    
 }
 
-h2{
+h2 {
     font-size: 25px;
     color: #18191f;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
 }
-h3{
-    font-size: 18px;
 
-}
 .continue-button {
     background-color: #007bff;
-    color: rgb(0, 0, 0);
-    text-align: center;
+    color: black;
     padding: 10px;
     text-decoration: none;
     border-radius: 8px;
     font-size: 25px;
-    margin-left: 1200px;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block; /* Center button */
     transition: 0.5s;
-    cursor:pointer;
-    margin-top:80px ;
-    margin-left: 1100px;
-    
 }
+
 .continue-button:hover {
     background-color: #0056b3;
-    
-
 }
-.selectflight{
-    display: block;
-    width: 800px;
-    height:270px;
-    background-color: #d9d9d9d7;
-    text-align: center;
+
+.selectflight {
+    width: 80%;
     padding: 10px;
     border-radius: 20px;
-    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.18);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
-    margin-left: 100px;
-    margin-top: 30px;
-    margin-bottom: 110px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin: 30px auto 110px; /* Centering box */
     color: #060031;
-    
-
-
-
 }
 
-th,td{
-    width:15%;
+th, td {
+    width: 15%;
     font-size: 20px;
-    border:1px solid black;
-    padding: 1px;
+    border: 1px solid black;
+    padding: 5px;
 }
-
-
-.selectbtn{
-        border: 0px;
-        width: 100%;
-        height: 2em;
-        margin-top: 5px;
-    }
 
 
 .selectbtn:hover {
     background-color: #45a049;
-    
 }
-
-
 
 /* Responsive Design for Tablets (width <= 768px) */
 @media (max-width: 768px) {
-    .searchbox {
-        width: 70%;
-        margin-left: 10%;
-    }
-
-    .selectflight {
+    .searchbox, .selectflight {
         width: 90%;
-        margin-left: 5%;
     }
 
     .continue-button {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
         font-size: 20px;
         max-width: 250px;
     }
@@ -142,12 +98,7 @@ th,td{
 
 /* Responsive Design for Mobile Devices (width <= 480px) */
 @media (max-width: 480px) {
-    .searchbox {
-        width: 90%;
-        margin-left: 5%;
-    }
-
-    .selectflight {
+    .searchbox, .selectflight {
         width: 100%;
         margin-left: 0;
     }
@@ -160,17 +111,11 @@ th,td{
         font-size: 18px;
     }
 
-    h3 {
-        font-size: 16px;
-    }
-
     th, td {
         font-size: 16px;
     }
 
     .continue-button {
-        margin-left: auto;
-        margin-right: auto;
         font-size: 18px;
         padding: 10px;
     }
