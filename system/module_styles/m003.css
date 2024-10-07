@@ -99,9 +99,10 @@ button[type="submit"]:hover {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 768px) 
+{
     .edit-profile {
-        width: 95%; */
+        width: 95%;
     }
 
     button[type="submit"] {

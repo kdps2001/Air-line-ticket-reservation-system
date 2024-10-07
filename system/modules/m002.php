@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $booking = $booking_result->fetch_assoc();
 
         $create_ticket_query = "INSERT INTO ticket (booking_id, ticket_status) 
-                         VALUES ('" . $booking['booking_id'] . "', '$ticket_status')";
+                         VALUES ('" . $booking['booking_id'] . "', 'created')";
         $conn->query($create_ticket_query);
 
         $update_booking_query = "UPDATE booking SET booking_status = 'completed' WHERE booking_id = '" . $booking['booking_id'] . "'";
@@ -52,13 +52,13 @@ $pending_bookings_result = $conn->query($pending_bookings_query);
         <th>Action</th>
     </tr>
 <?php
-    if($result->num_rows > 0)
+    if($pending_bookings_result->num_rows > 0)
     {
 
    
     while ($row = $pending_bookings_result->fetch_assoc()): ?>
     <tr>
-        <br>
+        
         <td><?php echo $row['booking_id']; ?></td>
         <td><?php echo $row['user_id']; ?></td>
         <td><?php echo $row['flight_no']; ?></td>

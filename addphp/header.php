@@ -34,12 +34,11 @@
                 <li><a href="index.php" class="<?php echo ($currentPage == 'index.php') ? 'active' : ''; ?>">Home</a></li>
                 <li><a href="about.php" class="<?php echo ($currentPage == 'about.php') ? 'active' : ''; ?>">About us</a></li>
                 <li><a href="contact.php" class="<?php echo ($currentPage == 'contact.php') ? 'active' : ''; ?>">Contact us</a></li>
-
-            </ul>
-        </div>
         <?php
             if(isset($_SESSION["user_id"]))
             {
+                echo '<li><a href="mybooking.php" class="' . (($currentPage == 'mybooking.php') ? 'active' : '') . '">My Booking</a></li>';
+                echo '</ul></div>';
                 echo '<div class="user-info">';
                 echo "<div><p>Welcome " . $_SESSION["user_name"] . "</p></div>";
 
@@ -60,6 +59,7 @@
             }
             else
             {
+                echo '</ul></div>';
                 echo '<div class="nav-button">
                     <button class="btn signin" id="loginBtn" onclick="window.location.href=\'signin.php\'">Sign In</button>
                     <button class="btn signup" id="registerBtn" onclick="window.location.href=\'signup.php\'">Sign Up</button>
