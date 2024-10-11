@@ -55,11 +55,23 @@ if(!isset($_SESSION["user_id"]))
     
             <div class="form-actions">
                 <input type="reset" class="btn resetbtn" value="Reset">
-                <button type="submit" name = "submit" class="btn submitbtn">Save Changes </button>
+                <button type="submit" name = "submit" class="btn submitbtn" id="popup" onsubmit="confirmSubmission(event)">Save Changes </button>
             </div>
         </fieldset>
     </form>
 </div>
+
+<script>
+        function confirmSubmission(event) 
+        {
+            var userConfirmed = confirm("Are you sure ?");
+
+            if (!userConfirmed)
+            {
+                event.preventDefault();
+            }
+        }
+    </script>
 
 <?php
 include 'addphp/footer.php';

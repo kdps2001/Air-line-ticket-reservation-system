@@ -58,7 +58,7 @@ $sql_flight = "
 </div>
 <br>
 
-<table>
+<table class="selectflight">
     <tr>
         <th>Flight No</th>
         <th>Airline</th>
@@ -119,6 +119,8 @@ $sql_flight = "
         }
     ?>
 </table>
+
+<button type="button" name="Back" class="backbtn"onclick="window.location.href='index.php'">Back To Home</button>
 
 
 <?php

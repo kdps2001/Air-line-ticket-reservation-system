@@ -43,7 +43,19 @@ $result = $conn->query($sql);
 
    <center><h1><br>FAQ Update</h1></center>
 
-<form action="" method="POST" class="edit-profile">
+<script>
+        function confirmSubmission(event) 
+        {
+            var userConfirmed = confirm("want to continue ?");
+
+            if (!userConfirmed)
+            {
+                event.preventDefault();
+            }
+        }
+</script>
+
+<form action="" method="POST" class="edit-profile" onsubmit="confirmSubmission(event)">
     <?php
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) 

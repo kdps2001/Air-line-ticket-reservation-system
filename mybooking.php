@@ -81,6 +81,8 @@ $result = $conn->query($query);
     </div>
 </div>
 
+<script src="scripts/my_booking.js"></script>
+
 <?php
 include 'addphp/footer.php';
 ?>

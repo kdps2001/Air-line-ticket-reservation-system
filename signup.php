@@ -50,7 +50,7 @@ require_once 'addphp/phpfunction.php';
                     <button type="submit" name = "submit" class="btn">Register</button>
                 </div>
                 
-                <p class="go_in_up" >Already have an account? <a href="signin.php">Log In</a></p>
+                <p class="go_in_up">Already have an account? <a href="signin.php">Log In</a></p>
             </form>
         </div>
     </div>

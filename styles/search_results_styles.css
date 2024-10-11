@@ -61,15 +61,37 @@ h2 {
 }
 
 th, td {
-    width: 15%;
+    width: 13%;
     font-size: 20px;
     border: 1px solid black;
     padding: 5px;
+    color: #18191f;
 }
 
 
 .selectbtn:hover {
     background-color: #45a049;
+}
+
+
+.backbtn{
+    background-color: #007bff;
+    width:150px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block; /* Center button */
+    transition: 0.5s;
+    margin-left: 80px;
+    margin-top: -30px;
+}
+
+.backbtn:hover{
+    background-color:#0056b3 ;
 }
 
 /* Responsive Design for Tablets (width <= 768px) */

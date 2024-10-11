@@ -105,12 +105,14 @@ $sql_class = "SELECT * FROM class";
                     </div><br>
 
                     <div class="subbtn">
-                    <input type="submit" name="submit" class="submitbtn" value ="Search" > 
+                    <input type="submit" name="submit" class="submitbtn" value ="Search" onsubmit="confirmSubmission(popup) "id="popup"> 
                     </div>
         
         </fieldset> <br><br><br>
     </form>
     
+    <script src="scripts/index.js"></script>
+
 <?php
 include 'addphp/footer.php';
 ?>

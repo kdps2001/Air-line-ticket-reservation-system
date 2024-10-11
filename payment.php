@@ -23,7 +23,7 @@ if(isset($_POST['submit']))
 
 ?>
 
-        <!-- Left Side: Payment Description -->
+        
          <div class="container1">
         <div class="payment-description">
             <h1 class="">Payment Option</h1>
@@ -39,7 +39,6 @@ if(isset($_POST['submit']))
         </div>
 
         <div class="container2">
-        <!-- Center: Payment Form -->
         <div class="payment-form">
             <h2>Online Payment</h2>
 
@@ -52,7 +51,8 @@ if(isset($_POST['submit']))
                 </div>
                 <div class="form-group">
                     <label for="card-name">Card Name:</label>
-                    <input type="text" id="card-name" placeholder="Enter Card Name"required>
+                    <input type="text" id="card-name" placeholder="Enter Card Name"requi
+                    red>
                 </div>
                 <div class="form-group">
                     <label for="expire-date">Expire Date:</label>
@@ -90,7 +90,6 @@ if(isset($_POST['submit']))
             </form>
         </div>
 </div>
-        <!-- Right Side: Total Amount -->
         <div class="total-amount">
             <h3>Total Amount</h3>
             <div class="bill">
@@ -102,11 +101,10 @@ if(isset($_POST['submit']))
         </div>
         
         <script>
-        // Pass PHP session login status to JavaScript
         const isLoggedIn = <?php echo json_encode($is_logged_in); ?>;
         </script>
 
-    <script src="js/payment.js"></script>
+    
 <?php
 include 'addphp/footer.php';
 ?>
