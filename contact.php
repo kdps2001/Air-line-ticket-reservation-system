@@ -22,7 +22,7 @@ $result = $conn->query($sql);
             echo '<p>No FAQs available.</p>';
         }
         ?>
-    </div>
+</div>
 <?php
 include 'addphp/footer.php';
 ?>

@@ -27,7 +27,7 @@ FROM
     flight f, 
     airline a, 
     seat s, 
-    flight_class fc, 
+    flight_class fc,
     user u, 
     airport dep_airport, 
     airport arr_airport

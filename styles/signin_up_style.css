@@ -65,8 +65,17 @@
 }
 
 .go_in_up{
-    margin-top: 20px;
+    margin-top: 20px; 
 }
+.go_in_up a{
+    color: blue; 
+    text-decoration: none; 
+    padding: 5px;
+    background-color: white;
+    margin-left : 5px;
+    border-radius: 5px;
+}
+
 .error_msg {
     color: red;
     text-align: center;

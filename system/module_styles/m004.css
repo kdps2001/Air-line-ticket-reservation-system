@@ -1,0 +1,104 @@
+
+fieldset{
+    background-color: #ffffff46;
+    width: 750px;
+    border-color: +000000;
+    border-radius: 10px;
+    padding: 25px;
+    font-size: 20px;
+    background-color: #ffffff46;
+    margin-left: auto; 
+    margin-right: auto;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+
+}
+.container{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    background-color: #ffffff46;
+    border-radius: 8px;
+    width : 800px;
+    border-color: #000000;
+    border-style: double;
+    margin-left: 100px;
+}
+
+.container2{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    background-color: #ffffff46;
+    border-radius: 8px;
+    width : 500px;
+    border-color: #000000;
+    border-style: double;
+    margin-left: 950px;
+    margin-top: -950px;
+    margin-bottom: 800px;
+}
+
+.flno{
+    width: 85%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.removebtn{
+    margin-left: 300px;
+    margin-top: 10px;
+    border-radius: 6px;
+    background-color: #bbbbbbcb;
+    padding:5px ;
+    cursor: pointer;
+}
+
+.removebtn:hover{
+    background-color: #ff7c75;
+}
+
+
+.fname,.airlines,.destination,.ftime,.fdate{
+    width: 35%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+input , textarea{
+    border-radius: 6px;
+    font-size: 18px;
+  
+}
+
+.submitbtn{
+    border-radius: 6px;
+    background-color: #d4d4d4b7;
+    padding:5px ;
+    cursor: pointer;
+}
+
+.cancelbtn{
+    border-radius: 6px;
+    background-color: #d4d4d4b7;
+    padding:5px ;
+    cursor: pointer;
+}
+
+
+.submitbtn:hover {
+    background-color: #51ffbc;  
+}
+
+.cancelbtn:hover{
+    background-color: #ff9590;
+}

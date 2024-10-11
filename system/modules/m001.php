@@ -1,5 +1,4 @@
 <?php
-
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         if (isset($_POST['user']) && isset($_POST['option'])) 
@@ -21,9 +20,7 @@
             {
                 $query = "SELECT * FROM user WHERE email = '$searchValue'";
             }
-
             $result = $conn->query($query);
-
             if ($result->num_rows > 0) 
             {
                 $user = $result->fetch_assoc();
@@ -32,16 +29,12 @@
             {
                 $error_message = "No user found.";
             }
-
             
         }
     }
 ?>
-
-
 <div class="container">
     <form action="" method="POST">
-
         <div class="menubox">
         <select name="option" id="menu" class="menulist" required>
         <option disabled <?php echo !isset($_POST['option']) ? 'selected' : ''; ?>>Select User</option> 
@@ -53,14 +46,11 @@
     
         <div class="user">
         <input type="text" class="user" name="user" placeholder="User ID/Name/Email" value="<?php echo isset($_POST['user']) ? $_POST['user'] : ''; ?>" required>
-
         </div>   
-
         <div class="search">
             <input type="submit"  class="search-btn" value ="Search" > 
         </div>
     </form>   
-
         <?php if (isset($error_message)) echo "<br><p class=\"error\">$error_message</p>"; ?>
        
         
@@ -76,9 +66,22 @@
                 <h2>account status : <?php echo $user['user_status']; ?></h2>
             </fieldset>
 
-        <form action="essentialphp/account_manage.php" method="POST">
+    <script>
+        function confirmSubmission(event) 
+        {
+            var userConfirmed = confirm("Are you sure ?");
+
+            if (!userConfirmed)
+            {
+                event.preventDefault();
+            }
+        }
+    </script>
+
+
+        <form action="essentialphp/account_manage.php" method="POST" onsubmit="confirmSubmission(event)">
             <div class="buttons">
-            <input type="hidden" name="manege_user_id" value="<?php echo $user['user_id']; ?>">
+            <input type="hidden" name="manage_user_id" value="<?php echo $user['user_id']; ?>">
             <input type="submit"  name="submit" class="delete-btn" value ="delete" > 
             <input type="submit" name="submit" class="suspend-btn" value ="suspend" > 
             <br>
@@ -87,9 +90,7 @@
            
         <?php endif; // End of user check ?>
         </div>
-
         <?php
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if (isset($_POST['user']) && isset($_POST['option'])) {
@@ -104,9 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } elseif ($searchType == 'email') {
             $query = "SELECT * FROM user WHERE email = '$searchValue'";
         }
-
         $result = $conn->query($query);
-
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
         } else {
@@ -114,10 +113,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-
         // Initialize the suspended_users array before the next query
         $suspended_users = []; // Initialize the array to avoid warnings
-
         // Fetch suspended users
         $query = "SELECT * FROM user WHERE user_status = 'suspend'";
         $result = $conn->query($query);
@@ -126,7 +123,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $suspended_users[] = $user; // Append each user to the array
             }
         } else {
-
             $error_message = "No suspended users found.";
         }
         ?>
@@ -134,18 +130,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h1>Suspended Users</h1>
         <br>
         
-        <table>
+        <table><center>
             <thead>
                 <tr>
                     <th>User ID</th>
                     <th>User Name</th>
                     <th>Email</th>
-                    <th>Suspension Reason</th>
                     <th>Action</th>
                 </tr>   
-            </thead>
+            </thead></center>
             
-            <tbody>
+            <tbody><center>
                 <?php
                 foreach ($suspended_users as $user) {
                     echo '<tr>';
@@ -153,14 +148,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     echo '<td>' . $user['user_name'] . '</td>';
                     echo '<td>' . $user['email'] . '</td>';
                     echo '<td>
-                        <form action="essentialphp/reactivate_user.php" method="POST">
+                        <form action="essentialphp/reactivate_user.php" method="POST" >
                             <input type="hidden" name="manege_user_id" value="' . $user['user_id'] . '">
                             <input type="submit" name="submit" class="reactivate-btn" value="Reactivate">
                         </form>
                     </td>';
                     echo '</tr>';
                 }
-                ?>
+                ?></center>
             </tbody>
         </table>
     </div>

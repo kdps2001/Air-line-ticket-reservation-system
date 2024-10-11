@@ -2,7 +2,7 @@
 $additionalCSS = ["styles/about_styles.css"];
 include 'addphp/header.php';
 ?>
-    <div class="container">
+    <div class="container_full">
         <h1>About Us</h1>
         <p>Welcome to SkyWave Ticket Reservation System!</p>
 

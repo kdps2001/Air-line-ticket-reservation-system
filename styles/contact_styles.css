@@ -13,6 +13,8 @@ body {
     background-color: white; /* White background for the container */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 h1 {
